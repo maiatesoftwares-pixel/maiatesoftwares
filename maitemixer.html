@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maite Mixer - MaIAte Softwares</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0b0b1a; color: #e8e8f0; line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .header {
+            background: rgba(11, 11, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo { font-size: 22px; font-weight: 800; }
+        .logo .destaque { color: #00d4ff; }
+        .logo .normal { color: #fff; }
+        .nav { display: flex; gap: 28px; flex-wrap: wrap; }
+        .nav a { font-size: 14px; font-weight: 500; color: #aab; transition: color 0.2s; }
+        .nav a:hover { color: #00d4ff; }
+        .detalhes { padding: 60px 0; }
+        .detalhes h1 { font-size: 40px; color: #00d4ff; margin-bottom: 16px; }
+        .detalhes p { color: #99a; font-size: 18px; max-width: 700px; }
+        .detalhes .preco { font-size: 28px; color: #00d4ff; margin: 20px 0; }
+        .btn { padding: 14px 36px; border-radius: 40px; font-size: 15px; font-weight: 600; transition: all 0.25s; display: inline-block; border: none; cursor: pointer; background: #00d4ff; color: #0b0b1a; }
+        .btn:hover { background: #00b8e6; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 212, 255, 0.25); }
+        .rodape { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.04); color: #667; font-size: 14px; }
+        .rodape a { color: #00d4ff; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: center; gap: 8px; }
+            .nav { gap: 18px; justify-content: center; }
+            .nav a { font-size: 13px; }
+            .detalhes h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo"><span class="normal">MaIAte</span><span class="destaque">SOftwares</span></div>
+            <nav class="nav">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="downloads.html">Downloads</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <section class="detalhes">
+        <div class="container">
+            <h1>🎛️ Maitate Mixer</h1>
+            <p>Mixagem de áudio profissional com efeitos em tempo real, equalização e exportação em alta qualidade.</p>
+            <div class="preco">💰 Teste Grátis</div>
+            <a href="downloads.html" class="btn">📥 Baixar Agora</a>
+        </div>
+    </section>
+    <footer class="rodape">
+        <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

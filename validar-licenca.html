@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Licença - MaIAte SOftwares</title>
+    <style>
+        body { font-family: Arial; background: #0b0b1a; color: #fff; text-align: center; padding: 50px; }
+        input { padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #00d4ff; background: #1a1a2e; color: #fff; }
+        button { padding: 10px 30px; background: #00d4ff; color: #0b0b1a; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        #resultado { margin-top: 20px; padding: 20px; border-radius: 10px; }
+        .valida { background: #10b981; }
+        .invalida { background: #ef4444; }
+    </style>
+</head>
+<body>
+    <h1>🔐 Validar Licença</h1>
+    <p>Digite sua chave de licença para verificar se está ativa</p>
+    <input type="text" id="licenca" placeholder="XXXX-XXXX-XXXX-XXXX">
+    <button onclick="validar()">✅ Validar</button>
+    <div id="resultado"></div>
+
+    <script>
+    function validar() {
+        const chave = document.getElementById('licenca').value.trim();
+        const div = document.getElementById('resultado');
+        
+        if (!chave) {
+            div.innerHTML = '⚠️ Digite uma chave de licença!';
+            div.className = 'invalida';
+            return;
+        }
+
+        // 🔥 CHAMAR SUA API DO KEYGEN AQUI
+        fetch('/validar-licenca?chave=' + chave)
+            .then(response => response.json())
+            .then(data => {
+                if (data.valida) {
+                    div.innerHTML = '✅ Licença VÁLIDA!<br>Produto: ' + data.produto + '<br>Expira: ' + data.expiracao;
+                    div.className = 'valida';
+                } else {
+                    div.innerHTML = '❌ Licença INVÁLIDA!<br>' + data.motivo;
+                    div.className = 'invalida';
+                }
+            })
+            .catch(error => {
+                div.innerHTML = '❌ Erro ao validar: ' + error;
+                div.className = 'invalida';
+            });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15388711950"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-15388711950');
+    </script>
+    <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrafoLaudo Analyzer Pro - MaIAte SOftwares</title>
+    <!-- Meta Descrição -->
+    <meta name="description" content="Software para perícia grafotécnica e digital. Compare assinaturas, analise traços, sobreposição e muito mais! Baixe e teste grátis!">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0b0b1a; color: #e8e8f0; line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+}
+
+        /* ===== HEADER ===== */
+        .header {
+            background: rgba(11, 11, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+       
+
+        .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.header-inner .logo {
+    flex: 0 0 180px;
+}
+
+.header-inner .nav {
+    flex: 1 1 auto;
+}
+        .logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    min-width: 180px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+        .logo .destaque { color: #00d4ff; }
+        .logo .normal { color: #fff; }
+        .nav { display: flex; gap: 28px; flex-wrap: wrap; }
+        .nav a { font-size: 14px; font-weight: 500; color: #aab; transition: color 0.2s; }
+        .nav a:hover { color: #00d4ff; }
+
+        /* ===== CONTEÚDO ===== */
+        .detalhes {
+            padding: 40px 0 60px;
+            background: #0f0f22;
+        }
+        .detalhes .icone-grande {
+            font-size: 72px;
+            text-align: center;
+            display: block;
+            margin-bottom: 16px;
+        }
+        .detalhes h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #00d4ff;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .detalhes .subtitulo {
+            text-align: center;
+            color: #99a;
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .detalhes .descricao {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            background: #181833;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .detalhes .descricao p {
+            color: #aaa;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .detalhes .descricao p:last-child {
+            margin-bottom: 0;
+        }
+
+        .detalhes h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #00d4ff;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+        .beneficio-item {
+            background: #181833;
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .beneficio-item .icone {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .beneficio-item h4 {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .beneficio-item p {
+            font-size: 14px;
+            color: #99a;
+        }
+
+        .tabela-funcionalidades {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            background: #181833;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .tabela-funcionalidades .linha {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .tabela-funcionalidades .linha:last-child {
+            border-bottom: none;
+        }
+        .tabela-funcionalidades .linha .modulo {
+            font-weight: 600;
+            color: #00d4ff;
+        }
+        .tabela-funcionalidades .linha .recursos {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .requisitos {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            background: #181833;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .requisitos ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+        }
+        .requisitos ul li {
+            color: #aaa;
+            font-size: 15px;
+            padding: 4px 0;
+        }
+        .requisitos ul li::before {
+            content: "• ";
+            color: #00d4ff;
+        }
+
+        .planos {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .planos .plano-card {
+    background: #181833;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+        .plano-card .nome {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .plano-card .preco {
+            font-size: 24px;
+            font-weight: 700;
+            color: #10b981;
+            margin: 12px 0;
+        }
+        .plano-card .desc {
+            color: #99a;
+            font-size: 14px;
+        }
+
+        .btn {
+            margin-top: auto;
+            display: inline-block;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+            background: #00d4ff;
+            color: #0b0b1a;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #00b8e6;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.25);
+        }
+        .btn-success {
+            background: #10b981;
+            color: #fff;
+        }
+        .btn-success:hover {
+            background: #059669;
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.25);
+        }
+        .btn-center {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .suporte {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            background: #181833;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .suporte a {
+            color: #00d4ff;
+        }
+        .suporte a:hover {
+            text-decoration: underline;
+        }
+
+        .rodape {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            color: #667;
+            font-size: 14px;
+        }
+        .rodape a { color: #00d4ff; }
+
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: center; gap: 8px; }
+            .nav { gap: 18px; justify-content: center; }
+            .nav a { font-size: 13px; }
+            .detalhes h1 { font-size: 30px; }
+            .tabela-funcionalidades .linha { grid-template-columns: 1fr; gap: 4px; }
+            .requisitos ul { grid-template-columns: 1fr; }
+            .planos { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<header class="header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        <div class="logo" style="font-size: 22px; font-weight: 800; flex-shrink: 0;">
+            <span class="normal">MaIAte</span><span class="destaque">SOftwares</span>
+        </div>
+        <nav style="display: flex; gap: 28px; flex-shrink: 0;">
+            <a href="index.html" style="color: #aab; text-decoration: none; font-size: 14px; font-weight: 500;">Início</a>
+            <a href="produtos.html" class="ativo" style="color: #00d4ff; text-decoration: none; font-size: 14px; font-weight: 500; position: relative;">Produtos</a>
+            <a href="contato.html" style="color: #aab; text-decoration: none; font-size: 14px; font-weight: 500;">Contato</a>
+        </nav>
+    </div>
+</header>
+
+
+    <section class="detalhes">
+        <div class="container">
+
+            <span class="icone-grande">🔬</span>
+            <h1>GrafoLaudo Analyzer Pro</h1>
+            <p class="subtitulo">Software Especializado para Perícia Grafotécnica e Perícia Digital</p>
+
+            <div class="descricao">
+                <p>Transforme seus laudos periciais com mais estrutura, clareza visual e redução significativa das chances de impugnação.</p>
+                <p>Desenvolvido por peritos para peritos, o GrafoLaudo Analyzer Pro é a ferramenta definitiva para análise gráfica, comparação de assinaturas e elaboração de laudos técnicos com alto padrão de qualidade e profissionalismo.</p>
+            </div>
+
+            <h2>⚡ Por que escolher o GrafoLaudo Analyzer Pro?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <span class="icone">📂</span>
+                    <h4>Gestão completa de processos</h4>
+                    <p>Organize casos, tribunais, comarcas, honorários, custos e contatos das partes em uma interface intuitiva.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icone">✂️</span>
+                    <h4>Extração inteligente de assinaturas</h4>
+                    <p>Recorte diretamente de PDFs ou importe imagens (PNG, JPG, JPEG) com campos específicos para identificação pericial.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icone">🎨</span>
+                    <h4>Ambiente gráfico poderoso</h4>
+                    <p>Compare assinaturas lado a lado, ajuste opacidade, brilho, contraste, inverta cores e binarize imagens para análises mais precisas.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icone">📐</span>
+                    <h4>Ferramentas técnicas completas</h4>
+                    <p>Medições em mm, inclinação, gladiolagem, trajetória, lupa, formas geométricas, pontos numerados e muito mais.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icone">📄</span>
+                    <h4>Integração com o Microsoft Word</h4>
+                    <p>Modelos de documentos prontos (aceite, agendamento, laudos, impugnações etc.) com preenchimento automático de dados do processo e do perito.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icone">🔒</span>
+                    <h4>Segurança e backup</h4>
+                    <p>Sistema de backup automático e manual para proteger seus dados. Temas claro/escuro para conforto visual.</p>
+                </div>
+            </div>
+
+            <h2>📋 Funcionalidades principais</h2>
+            <div class="tabela-funcionalidades">
+                <div class="linha">
+                    <span class="modulo">Processos</span>
+                    <span class="recursos">Cadastro de TJs e comarcas, cards com informações do processo, filtros, resumo financeiro anual, status ativo/arquivado</span>
+                </div>
+                <div class="linha">
+                    <span class="modulo">PDF/Recorte</span>
+                    <span class="recursos">Leitura de PDFs, zoom, busca textual, extração de assinaturas com metadados (ID, página, folha, data)</span>
+                </div>
+                <div class="linha">
+                    <span class="modulo">Área de trabalho</span>
+                    <span class="recursos">Preview de assinaturas, canvas para sobreposição, ajustes de imagem, ferramentas de medição, anotações e formas</span>
+                </div>
+                <div class="linha">
+                    <span class="modulo">Perícia Digital</span>
+                    <span class="recursos">Compara documentos, valida certificado ICP-Brasil, calcula hash SHA-256, detecta nível da assinatura (A1, A2, A3, A4)</span>
+                </div>
+                <div class="linha">
+                    <span class="modulo">Configurações</span>
+                    <span class="recursos">Ajuste de precisão, backups, DPI para medições precisas, informações do sistema</span>
+                </div>
+            </div>
+
+            <h2>📄 Modelos de documentos incluídos</h2>
+            <div class="descricao" style="text-align:center; max-width:700px;">
+                <p style="font-size:15px;">Aceite (completo e simples) · Agendamento (completo e simples) · Complementação de Honorários · Contrato de Assistente · Esclarecimentos Periciais · Formulário de Coleta · Impugnação de Honorários · Impugnação de Laudo</p>
+                <p style="font-size:14px; color:#667;">Campos como nome do perito, CPF, OAB, número do processo, autor, réu, valor da causa e tribunal são preenchidos automaticamente.</p>
+            </div>
+
+            <h2>📋 Requisitos do sistema</h2>
+            <div class="requisitos">
+                <ul>
+                    <li>Windows 10 ou 11 (64 bits)</li>
+                    <li>RAM: Mínimo 4 GB | Recomendado 8 GB</li>
+                    <li>Processador: Intel Core i3 (mínimo) | Core i5/Ryzen 5 (recomendado)</li>
+                    <li>Espaço em disco: 1 GB livre</li>
+                    <li>Resolução: 1366×768 (mínimo) | 1920×1080 (recomendado)</li>
+                    <li>Conexão com internet: Necessária apenas para ativação da licença</li>
+                    <li>Não compatível com Windows 7, 8, 8.1, XP ou Vista</li>
+                    <li>Visual C++ Redistributable 2015-2022 (x64) necessário</li>
+                </ul>
+            </div>
+
+           <h2>💰 Planos</h2>
+           <div class="planos">
+               <div class="plano-card">
+                   <div class="nome">Teste Grátis</div>
+                   <div class="preco">R$ 0,00</div>
+                   <div class="desc">3 dias com todas as funções Aproveite!</div>
+                   <a href="/downloads/GrafoLaudo_Setup.rar" class="btn btn-primary" style="padding: 14px 36px; border-radius: 40px; font-size: 15px; font-weight: 600; transition: all 0.25s; border: none; cursor: pointer; background: #00d4ff; color: #0b0b1a; text-decoration: none; display: inline-block;">📥 Testar Agora</a>
+           </div>
+           <div class="plano-card">
+               <div class="nome">Anual</div>
+               <div class="preco">R$ 399,00</div>
+               <div class="desc">Suporte e atualizações por 1 ano Aproveite!</div>
+               <a href="#" class="btn btn-success" style="margin-top:16px; display:inline-block;" onclick="comprar('grafolaudo_anual')">💳 Comprar</a>
+           </div>
+           <div class="plano-card">
+               <div class="nome">Vitalícia</div>
+               <div class="preco">R$ 699,00</div>
+               <div class="desc">Pague uma única vez e use pra sempre! (Versão atual)</div>
+               <a href="#" class="btn btn-success" style="margin-top:16px; display:inline-block;" onclick="comprar('grafolaudo_vitalicio')">💳 Comprar</a>
+           </div>
+        </div> 
+           </div>
+            <h2>📞 Suporte e contato</h2>
+            <div class="suporte">
+                <p>Dúvidas, sugestões ou problemas técnicos?</p>
+                <p>E-mail: <a href="mailto:contato@maiatesoftwares">contato@maiatesoftwares</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank">@maiate_softwares</a></p>
+                <p style="font-size:13px; color:#667; margin-top:12px;">© Direitos autorais — Este software é registrado e protegido por leis de direitos autorais. A licença é pessoal e intransferível.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
+        <p style="font-size:12px; color:#445;">A ferramenta auxilia, mas o olhar do perito é insubstituível.</p>
+    </footer>
+<script>
+function comprar(produto) {
+    fetch('/criar_pagamento/' + produto)
+        .then(response => response.json())
+        .then(data => {
+            if (data.url) {
+                window.location.href = data.url;
+            } else {
+                alert('Erro ao criar pagamento: ' + data.erro);
+            }
+        })
+        .catch(error => {
+            alert('Erro de conexão: ' + error);
+        });
+}
+</script>
+</body>
+</html>

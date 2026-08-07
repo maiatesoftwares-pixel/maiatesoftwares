@@ -1,0 +1,52 @@
+nohup: ignoring input
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://178.253.250.117:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-028-561
+127.0.0.1 - - [05/Aug/2026 02:09:04] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2026 02:15:19] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2026 02:18:51] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.1" 200 -
+127.0.0.1 - - [05/Aug/2026 02:21:48] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:21:58] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:22:14] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:40:26] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:41:01] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:41:52] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:42:36] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:42:48] "GET /criar_pagamento/wmmeunegocio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:49:09] "GET /criar_pagamento/grafolaudo_anual HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:49:16] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:49:56] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:54:09] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:54:14] "GET /criar_pagamento/wmmeunegocio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:55:49] "GET /criar_pagamento/wmmeunegocio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 02:58:29] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 03:05:50] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 15:40:31] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
+127.0.0.1 - - [05/Aug/2026 22:50:26] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
+ * Detected change in '/var/www/maiatesoftwares/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-028-561
+ * Detected change in '/var/www/maiatesoftwares/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-028-561
+ * Detected change in '/var/www/maiatesoftwares/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-028-561
+ * Detected change in '/var/www/maiatesoftwares/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-028-561
+ * Detected change in '/var/www/maiatesoftwares/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-028-561

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - MaIAte SOftwares</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #0b0b1a; color: #e8e8f0; line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .header {
+            background: rgba(11, 11, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo { font-size: 22px; font-weight: 800; }
+        .logo .destaque { color: #00d4ff; }
+        .logo .normal { color: #fff; }
+        .nav { display: flex; gap: 28px; flex-wrap: wrap; }
+        .nav a { font-size: 14px; font-weight: 500; color: #aab; transition: color 0.2s; }
+        .nav a:hover { color: #00d4ff; }
+        .section-downloads { padding: 80px 0; background: #0f0f22; }
+        .section-downloads h1 { text-align: center; font-size: 40px; font-weight: 700; margin-bottom: 12px; color: #fff; }
+        .section-downloads .subtitulo { text-align: center; color: #99a; font-size: 18px; margin-bottom: 48px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card {
+            background: #181833;
+            border-radius: 20px;
+            padding: 36px 28px 32px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .card:hover { border-color: #00d4ff44; transform: translateY(-6px); }
+        .card .icone { font-size: 44px; margin-bottom: 16px; display: block; }
+        .card h3 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .card p { font-size: 15px; color: #99a; margin-bottom: 4px; }
+        .card .versao { font-size: 13px; color: #667; margin-bottom: 16px; }
+        .btn { padding: 12px 28px; border-radius: 30px; font-size: 14px; font-weight: 600; transition: all 0.2s; display: inline-block; border: none; cursor: pointer; }
+        .btn-primary { background: #00d4ff; color: #0b0b1a; }
+        .btn-primary:hover { background: #00b8e6; transform: scale(1.03); }
+        .btn-secondary { background: transparent; color: #00d4ff; border: 2px solid #00d4ff; }
+        .btn-secondary:hover { background: #00d4ff; color: #0b0b1a; }
+        .rodape { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.04); color: #667; font-size: 14px; }
+        .rodape a { color: #00d4ff; }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: center; gap: 8px; }
+            .nav { gap: 18px; justify-content: center; }
+            .nav a { font-size: 13px; }
+            .section-downloads h1 { font-size: 30px; }
+            .grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        }
+            /* ===== MENU ATIVO - COR AZUL ===== */
+        .nav a.ativo {
+            color: #00d4ff;
+        }
+        .nav a.ativo::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo"><span class="normal">MaIAte</span><span class="destaque">SOftwares</span></div>
+            <nav class="nav">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="downloads.html" class="ativo">Downloads</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <section class="section-downloads">
+        <div class="container">
+            <h1>📥 Downloads</h1>
+            <p class="subtitulo">Baixe os instaladores dos nossos softwares</p>
+            <div class="grid">
+                <div class="card">
+                    <span class="icone">🔬</span>
+                    <h3>GrafoLaudo Analyzer Pro</h3>
+                    <p>Versão 2.4</p>
+                    <div class="versao">Windows 10/11 (64 bits)</div>
+                    <a href="#" class="btn btn-primary">📥 Baixar</a>
+                </div>
+                <div class="card">
+                    <span class="icone">🎛️</span>
+                    <h3>Maiate Mixer</h3>
+                    <p>Versão 1.0</p>
+                    <div class="versao">Windows 10/11 (64 bits)</div>
+                    <a href="#" class="btn btn-primary">📥 Baixar</a>
+                </div>
+                <div class="card">
+                    <span class="icone">📊</span>
+                    <h3>WM Meu Negócio</h3>
+                    <p>Versão 2.0</p>
+                    <div class="versao">Windows 10/11 (64 bits)</div>
+                    <a href="#" class="btn btn-primary">📥 Baixar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="rodape">
+        <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
