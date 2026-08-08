@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-15388711950"></script>
     <script>
@@ -116,7 +117,8 @@
         .nav a.ativo::after {
             width: 100%;
         }
-    </style>
+        * { cursor: default; }
+</style>
 </head>
 <body>
     <header class="header">
@@ -171,13 +173,24 @@
     </div>
 </div>
 
+<!-- Tabela Grafotécnica WM -->
+<div class="card">
+    <span class="icone">🔬</span>
+    <h3>Tabela Grafotécnica WM</h3>
+    <p>Software de análise comparativa de escrita com 25 características avaliadas. Ideal para laudos, perícias e estudos grafotécnicos.</p>
+    <div class="preco">💰 Consulte o preço</div>
+    <div class="btn-group">
+        <a href="wm-grafotecnica.html" class="btn btn-outline" style="padding: 10px 18px; border-radius: 50px; background: transparent; color: #aab; text-decoration: none; font-weight: 500; border: 1px solid #2d3748; transition: all 0.25s; display: inline-block; cursor: pointer;">📋 Descrição</a>
+    </div>
+</div>
 
 
         </div>
     </section>
     <footer class="rodape">
         <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
-    </footer>
+    <p style="margin-top: 12px; font-size: 16px;">📱 Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; font-size: 16px;">@maiate_softwares</a></p>
+</footer>
 <script>
 function comprar(produto) {
     fetch('/criar_pagamento/' + produto)

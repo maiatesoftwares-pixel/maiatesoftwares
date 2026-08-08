@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15388711950"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-15388711950');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Grafotécnica WM | MaIAte Softwares</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #141414, #1a1a2e);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid #1e3a5f;
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.08);
+        }
+        .badge {
+            display: inline-block;
+            background: #1e293b;
+            color: #60a5fa;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .subtitle {
+            color: #9ca3af;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 20px;
+        }
+        .destaque-box {
+            background: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .destaque-box h3 {
+            color: #60a5fa;
+            margin-bottom: 8px;
+        }
+        .destaque-box p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .card {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #1e293b;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+        .card .icon { font-size: 2rem; margin-bottom: 8px; }
+        .card h4 { color: #93c5fd; font-size: 1rem; margin-bottom: 6px; }
+        .card p { color: #9ca3af; font-size: 0.9rem; line-height: 1.5; }
+        .preco-box {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 25px 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #2d3748;
+            margin: 30px 0;
+        }
+        .preco-box .preco {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+        .preco-box .preco small {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+        .preco-box .obs {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+        .btn-comprar {
+            display: inline-block;
+            padding: 16px 50px;
+            background: #10b981;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-comprar:hover {
+            background: #059669;
+            transform: scale(1.02);
+        }
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 30px;
+            background: #1e293b;
+            color: #6b7280;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #2d3748;
+            transition: all 0.3s;
+        }
+        .btn-voltar:hover { color: #93c5fd; border-color: #3b82f6; }
+        .footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #4b5563;
+            font-size: 0.8rem;
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.8rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .preco-box .preco { font-size: 2rem; }
+        }
+        * { cursor: default; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <span class="badge">🔬 FERRAMENTA PERICIAL</span>
+    <h1>📊 Tabela Grafotécnica WM</h1>
+    <p class="subtitle">Software de análise comparativa de escrita — desenvolvido por Wagner Maiate</p>
+
+    <!-- DESTAQUE -->
+    <div class="destaque-box">
+        <h3>🔍 Para quem é este software?</h3>
+        <p>
+            Peritos grafotécnicos, profissionais de documentoscopia, estudantes de criminalística e qualquer pessoa que necessite de 
+            uma análise comparativa precisa entre amostras de escrita padrão e questionada, com resultados rápidos e confiáveis.
+        </p>
+    </div>
+
+    <!-- CARDS DE FUNCIONALIDADES -->
+    <div class="grid-2">
+        <div class="card">
+            <div class="icon">📋</div>
+            <h4>25 Características Analisadas</h4>
+            <p>Ritmo, pressão, velocidade, inclinação, hábitos gráficos, trajetória, alinhamento e muito mais.</p>
+        </div>
+        <div class="card">
+            <div class="icon">⚖️</div>
+            <h4>Comparação Padrão × Questionada</h4>
+            <p>Interface intuitiva para comparar características da escrita padrão e da escrita questionada lado a lado.</p>
+        </div>
+        <div class="card">
+            <div class="icon">📊</div>
+            <h4>Resultado Automático</h4>
+            <p>Análise convergente, divergente ou inconclusiva com cálculo de porcentagem de cada critério.</p>
+        </div>
+        <div class="card">
+            <div class="icon">🖼️</div>
+            <h4>Exportação Profissional</h4>
+            <p>Copie a tabela completa como imagem para incluir em laudos, relatórios e documentos periciais.</p>
+        </div>
+    </div>
+
+<!-- PREÇO E COMPRA -->
+<div class="preco-box">
+    <div class="preco">
+        R$ 99,90 <small>à vista</small>
+    </div>
+    <div class="obs">
+        Licença vitalícia — atualizações gratuitas — suporte incluso
+    </div>
+    <br>
+    <a href="#" class="btn-comprar" onclick="comprar('grafotecnica')">💳 Comprar Agora</a>
+</div>
+
+<!-- BOTÃO VOLTAR -->
+<div style="text-align: center;">
+    <a href="produtos.html" class="btn-voltar">← Voltar para Produtos</a>
+</div>
+
+<div class="footer">
+    <p>© 2026 <a href="index.html" style="color: #3b82f6; text-decoration: none;">MaIAte Softwares</a> — Todos os direitos reservados</p>
+    <p style="font-size: 0.7rem; color: #4b5563;">Tabela Grafotécnica WM — Software de Análise Pericial</p>
+</div>
+
+<script>
+function comprar(produto) {
+    fetch('/criar_pagamento/' + produto)
+        .then(response => response.json())
+        .then(data => {
+            if (data.url) {
+                window.location.href = data.url;
+            } else {
+                alert('Erro ao criar pagamento: ' + data.erro);
+            }
+        })
+        .catch(error => {
+            alert('Erro de conexão: ' + error);
+        });
+}
+</script>

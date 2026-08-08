@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-     <head>
+    <link rel="icon" type="image/png" href="/favicon.png">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-15388711950"></script>
     <script>
@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaIAte SOftwares | Tecnologia para Peritos e Criadores</title>
-        <meta name="description" content="MaIAte SOftwares - Soluções em perícia grafotécnica, mixagem de áudio e gestão para MEI. Baixe e teste grátis!">
+        <meta name="description" content="MaIAte SOftwares - SoluÃ§Ãµes em perÃ­cia grafotÃ©cnica, mixagem de Ã¡udio e gestÃ£o para MEI. Baixe e teste grÃ¡tis!">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -118,7 +118,7 @@
             font-weight: 400;
         }
 
-        /* ===== SEÇÃO PRODUTOS ===== */
+        /* ===== SEÃ‡ÃƒO PRODUTOS ===== */
         .section-produtos {
             padding: 40px 0 60px;
             background: #0f0f22;
@@ -223,7 +223,7 @@
             color: #00d4ff;
         }
 
-        /* ===== RODAPÉ ===== */
+        /* ===== RODAPÃ‰ ===== */
         .rodape {
             text-align: center;
             padding: 40px 20px;
@@ -297,7 +297,8 @@
                 min-width: 60px;
             }
         }
-    </style>
+        * { cursor: default; }
+</style>
 </head>
 <body>
 
@@ -308,7 +309,7 @@
                 <span class="normal">MaIAte</span><span class="destaque">SOftwares</span>
             </div>
             <nav class="nav">
-                <a href="index.html" class="ativo">Início</a>
+                <a href="index.html" class="ativo">InÃ­cio</a>
                 <a href="produtos.html">Produtos</a>
                 <a href="contato.html">Contato</a>
             </nav>
@@ -316,8 +317,10 @@
     </header>
 
     <!-- ===== HERO ===== -->
-    <section class="hero">
-        <span class="icone">🚀</span>
+    <section class="hero" style="padding: 3px 0;">
+
+        <img src="/logo_maiate2.png" alt="MaIAte Softwares" style="height: 120px; width: auto;">
+
         <h1>MaIAte <span class="destaque">SOftwares</span></h1>
         <p>Softwares simples que resolvem problemas reais e entregam resultados concretos.</p>
     </section>
@@ -326,58 +329,72 @@
     <section class="section-produtos" id="produtos">
         <div class="container">
             <h2>Produtos</h2>
-            <p class="subtitulo">Soluções desenvolvidas para resolver problemas reais</p>
+            <p class="subtitulo">SoluÃ§Ãµes desenvolvidas para resolver problemas reais</p>
 
             <div class="grid">
 
-                <!-- GrafoLaudo -->
-                <div class="card">
-                    <span class="icone">🔬</span>
-                    <h3>GrafoLaudo Analyzer Pro</h3>
-                    <p>Software especializado para perícia grafotécnica. Análise de assinaturas, medições, sobreposição e geração de laudos em Word.</p>
-                    <div class="preco">💰 Anual: R$ 399,00 | Vitalícia: R$ 699,00</div>
-                    <div class="btn-group-card">
-                        <a href="/downloads/GrafoLaudo_Setup.rar" class="btn-sm btn-sm-primary">📥 Baixar</a>
-                        <a href="#" class="btn-sm btn-sm-success" onclick="comprar('grafolaudo_vitalicio')">💳 Comprar</a>
-                        <a href="grafolaudo.html" class="btn-sm btn-sm-outline">Detalhes</a>
-                    </div>
+              <!-- GrafoLaudo -->
+            <div class="card">
+                <span class="icone">🔬</span>
+                <h3>GrafoLaudo Analyzer Pro</h3>
+                <p>Software especializado para perícia grafotécnica. Análise de assinaturas, medições, sobreposição e geração de laudos em Word.</p>
+                <div class="preco">💰 Anual: R$ 399,00 | Vitalícia: R$ 699,00</div>
+                <div class="btn-group-card">
+                    <a href="/baixar/GrafoLaudo" class="btn-sm btn-sm-primary">📥 Baixar</a>
+                    <a href="#" class="btn-sm btn-sm-success" onclick="comprar('grafolaudo_vitalicio')">💳 Comprar</a>
+                    <a href="grafolaudo.html" class="btn-sm btn-sm-outline">Detalhes</a>
                 </div>
+            </div>
 
-                <!-- Maiate Mixer -->
-                <div class="card">
-                    <span class="icone">🎛️</span>
-                    <h3>Maiate Mixer</h3>
-                    <p>Mixagem de áudio profissional com efeitos em tempo real, equalização e exportação em alta qualidade.</p>
-                    <div class="preco">💰 Vitalícia: R$ 199,00</div>
-                    <div class="btn-group-card">
-                        <a href="#" class="btn-sm btn-sm-primary">📥 Baixar</a>
-                        <a href="#" class="btn-sm btn-sm-success" onclick="comprar('maiatemixer')">💳 Comprar</a>
-                        <a href="maiatemixer.html" class="btn-sm btn-sm-outline">Detalhes</a>
-                    </div>
+            <!-- Maiate Mixer -->
+            <div class="card">
+                <span class="icone">🎛️</span>
+                <h3>Maiate Mixer</h3>
+                <p>Mixagem de áudio profissional com efeitos em tempo real, equalização e exportação em alta qualidade.</p>
+                <div class="preco">💰 Vitalícia: R$ 199,00</div>
+                <div class="btn-group-card">
+                    <a href="/baixar/MaiateMixer" class="btn-sm btn-sm-primary">📥 Baixar</a>
+                    <a href="#" class="btn-sm btn-sm-success" onclick="comprar('maiatemixer')">💳 Comprar</a>
+                    <a href="maiatemixer.html" class="btn-sm btn-sm-outline">Detalhes</a>
                 </div>
+            </div>
 
-                <!-- WM Meu Negócio -->
-                <div class="card">
-                    <span class="icone">📊</span>
-                    <h3>WM Meu Negócio</h3>
-                    <p>Sistema de gestão de clientes, produtos e orçamentos. Organize suas vendas e negócios em um só lugar.</p>
-                    <div class="preco">💰 Perpétua: R$ 99,00</div>
-                    <div class="btn-group-card">
-                        <a href="/downloads/WM_Meu_Negocio_Setup.rar" class="btn-sm btn-sm-primary">📥 Baixar</a>
-                        <a href="#" class="btn-sm btn-sm-success" onclick="comprar('wmmeunegocio')">💳 Comprar</a>
-                        <a href="wmmeunegocio.html" class="btn-sm btn-sm-outline">Detalhes</a>
-                    </div>
+            <!-- WM Meu Negócio -->
+            <div class="card">
+                <span class="icone">📊</span>
+                <h3>WM Meu Negócio</h3>
+                <p>Sistema de gestão de clientes, produtos e orçamentos. Organize suas vendas e negócios em um só lugar.</p>
+                <div class="preco">💰 Perpétua: R$ 99,00</div>
+                <div class="btn-group-card">
+                    <a href="/baixar/WM_Meu_Negocio" class="btn-sm btn-sm-primary">📥 Baixar</a>
+                    <a href="#" class="btn-sm btn-sm-success" onclick="comprar('wmmeunegocio')">💳 Comprar</a>
+                    <a href="wmmeunegocio.html" class="btn-sm btn-sm-outline">Detalhes</a>
                 </div>
-
+            </div>            
+         <!-- Tabela Grafotécnica WM -->
+         
+         
+        <!-- Tabela Grafotécnica WM -->
+        <div class="card">
+            <span class="icone">🔬</span>
+            <h3>Tabela Grafotécnica WM</h3>
+            <p>Ferramenta pericial para análise comparativa de escrita com 25 características avaliadas. Ideal para laudos e perícias.</p>
+            <div class="preco">💰 Perpétua: R$ 49,90</div>
+            <div class="btn-group-card">
+                <a href="anuncio-grafotecnica.html" class="btn-sm btn-sm-primary">📋 Ver Tabela</a>
+                <a href="#" class="btn-sm btn-sm-success" onclick="comprar('grafotecnica')">💳 Comprar</a>
+                <a href="wm-grafotecnica.html" class="btn-sm btn-sm-outline">Detalhes</a>
             </div>
         </div>
+
     </section>
 
-    <!-- ===== RODAPÉ ===== -->
+    <!-- ===== RODAPÃ‰ ===== -->
     <footer class="rodape">
-        <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
-        <p class="made-in">🇧🇷 Feito com precisão no Brasil</p>
-    </footer>
+        <p>Â© 2026 <a href="index.html">MaIAte SOftwares</a> â€” Todos os direitos reservados</p>
+        <p class="made-in">ðŸ‡§ðŸ‡· Feito com precisÃ£o no Brasil</p>
+    <p style="margin-top: 12px; font-size: 16px;">ðŸ“± Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; font-size: 16px;">@maiate_softwares</a></p>
+</footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
@@ -392,10 +409,11 @@
                     }
                 })
                 .catch(error => {
-                    alert('Erro de conexão: ' + error);
+                    alert('Erro de conexÃ£o: ' + error);
                 });
         }
     </script>
 
 </body>
 </html>
+

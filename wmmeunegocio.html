@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-15388711950"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-15388711950');
-</script>
-
-
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15388711950"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-15388711950');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WM Meu Negócio - MaIAte SOftwares</title>
-        <meta name="description" content="Sistema de gestão para MEI e pequenas empresas. Crie orçamentos, organize clientes/produtos e controle seu negócio. Baixe e teste grátis!">
+    <meta name="description" content="Sistema de gestão para pequenos empreendimentos com controle financeiro, clientes e produtos. Baixe e teste grátis!">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background: #0b0b1a; color: #e8e8f0; line-height: 1.7; }
         a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
 
-        /* HEADER */
+        /* ===== HEADER ===== */
         .header {
             background: rgba(11, 11, 26, 0.92);
             backdrop-filter: blur(12px);
@@ -37,40 +41,30 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 30px;
             width: 100%;
         }
-        .logo { font-size: 22px; font-weight: 800; flex-shrink: 0; }
+        .header-inner .logo {
+            flex: 0 0 180px;
+        }
+        .header-inner .nav {
+            flex: 1 1 auto;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            min-width: 180px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
         .logo .destaque { color: #00d4ff; }
         .logo .normal { color: #fff; }
-        .nav { display: flex; gap: 28px; flex-shrink: 0; margin-left: auto; }
-        .nav a { font-size: 14px; font-weight: 500; color: #aab; transition: color 0.2s; position: relative; }
+        .nav { display: flex; gap: 28px; flex-wrap: wrap; }
+        .nav a { font-size: 14px; font-weight: 500; color: #aab; transition: color 0.2s; }
         .nav a:hover { color: #00d4ff; }
-        .nav a.ativo {
-            color: #00d4ff;
-        }
-        .nav a.ativo::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #00d4ff;
-        }
-        .nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #00d4ff;
-            transition: width 0.25s;
-        }
-        .nav a:hover::after { width: 100%; }
 
-        /* CONTEÚDO */
+        /* ===== CONTEÚDO ===== */
         .detalhes {
             padding: 40px 0 60px;
             background: #0f0f22;
@@ -111,7 +105,9 @@
             font-size: 16px;
             margin-bottom: 12px;
         }
-        .detalhes .descricao p:last-child { margin-bottom: 0; }
+        .detalhes .descricao p:last-child {
+            margin-bottom: 0;
+        }
 
         .detalhes h2 {
             font-size: 28px;
@@ -134,11 +130,22 @@
             padding: 20px 24px;
             border: 1px solid rgba(255, 255, 255, 0.04);
         }
-        .beneficio-item .icone { font-size: 28px; display: block; margin-bottom: 8px; }
-        .beneficio-item h4 { font-size: 16px; color: #fff; margin-bottom: 4px; }
-        .beneficio-item p { font-size: 14px; color: #99a; }
+        .beneficio-item .icone {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .beneficio-item h4 {
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .beneficio-item p {
+            font-size: 14px;
+            color: #99a;
+        }
 
-        .tabela-diferenciais {
+        .tabela-funcionalidades {
             max-width: 900px;
             margin: 0 auto 30px;
             background: #181833;
@@ -146,15 +153,23 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .tabela-diferenciais .linha {
+        .tabela-funcionalidades .linha {
             display: grid;
             grid-template-columns: 1fr 2fr;
             padding: 12px 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         }
-        .tabela-diferenciais .linha:last-child { border-bottom: none; }
-        .tabela-diferenciais .linha .item { font-weight: 600; color: #00d4ff; }
-        .tabela-diferenciais .linha .desc { color: #aaa; font-size: 14px; }
+        .tabela-funcionalidades .linha:last-child {
+            border-bottom: none;
+        }
+        .tabela-funcionalidades .linha .modulo {
+            font-weight: 600;
+            color: #00d4ff;
+        }
+        .tabela-funcionalidades .linha .recursos {
+            color: #aaa;
+            font-size: 14px;
+        }
 
         .requisitos {
             max-width: 900px;
@@ -171,8 +186,15 @@
             grid-template-columns: 1fr 1fr;
             gap: 8px 20px;
         }
-        .requisitos ul li { color: #aaa; font-size: 15px; padding: 4px 0; }
-        .requisitos ul li::before { content: "• "; color: #00d4ff; }
+        .requisitos ul li {
+            color: #aaa;
+            font-size: 15px;
+            padding: 4px 0;
+        }
+        .requisitos ul li::before {
+            content: "• ";
+            color: #00d4ff;
+        }
 
         .planos {
             max-width: 900px;
@@ -181,18 +203,36 @@
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
         }
-        .plano-card {
+        .planos .plano-card {
             background: #181833;
             border-radius: 16px;
             padding: 30px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
         }
-        .plano-card .nome { font-size: 20px; font-weight: 700; color: #fff; }
-        .plano-card .preco { font-size: 24px; font-weight: 700; color: #10b981; margin: 12px 0; }
-        .plano-card .desc { color: #99a; font-size: 14px; }
+        .plano-card .nome {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .plano-card .preco {
+            font-size: 24px;
+            font-weight: 700;
+            color: #10b981;
+            margin: 12px 0;
+        }
+        .plano-card .desc {
+            color: #99a;
+            font-size: 14px;
+        }
 
         .btn {
+            margin-top: auto;
             display: inline-block;
             padding: 14px 36px;
             border-radius: 40px;
@@ -201,13 +241,11 @@
             transition: all 0.25s;
             border: none;
             cursor: pointer;
-            text-decoration: none;
-        }
-        .btn-primary {
             background: #00d4ff;
             color: #0b0b1a;
+            text-decoration: none;
         }
-        .btn-primary:hover {
+        .btn:hover {
             background: #00b8e6;
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0, 212, 255, 0.25);
@@ -218,7 +256,6 @@
         }
         .btn-success:hover {
             background: #059669;
-            transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(16, 185, 129, 0.25);
         }
         .btn-center {
@@ -235,8 +272,12 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .suporte a { color: #00d4ff; }
-        .suporte a:hover { text-decoration: underline; }
+        .suporte a {
+            color: #00d4ff;
+        }
+        .suporte a:hover {
+            text-decoration: underline;
+        }
 
         .rodape {
             text-align: center;
@@ -247,189 +288,177 @@
         }
         .rodape a { color: #00d4ff; }
 
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #1e293b;
+            color: #6b7280;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #2d3748;
+            transition: all 0.3s;
+        }
+        .btn-voltar:hover {
+            color: #93c5fd;
+            border-color: #3b82f6;
+        }
+
         @media (max-width: 768px) {
-            .header-inner {
-                flex-direction: column;
-                align-items: center;
-                gap: 8px;
-                width: 100%;
-            }
-            .logo {
-                font-size: 20px;
-                text-align: center;
-                min-width: unset;
-            }
-            .nav {
-                gap: 18px;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-left: 0;
-            }
+            .header-inner { flex-direction: column; align-items: center; gap: 8px; }
+            .nav { gap: 18px; justify-content: center; }
             .nav a { font-size: 13px; }
             .detalhes h1 { font-size: 30px; }
-            .tabela-diferenciais .linha { grid-template-columns: 1fr; gap: 4px; }
+            .tabela-funcionalidades .linha { grid-template-columns: 1fr; gap: 4px; }
             .requisitos ul { grid-template-columns: 1fr; }
             .planos { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
         }
-    </style>
+        * { cursor: default; }
+</style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header-inner">
-            <div class="logo">
-                <span class="normal">MaIAte</span><span class="destaque">SOftwares</span>
-            </div>
-            <nav class="nav">
-                <a href="index.html">Início</a>
-                <a href="produtos.html" class="ativo">Produtos</a>
-                <a href="contato.html">Contato</a>
-            </nav>
+<header class="header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+        <div class="logo" style="font-size: 22px; font-weight: 800; flex-shrink: 0;">
+            <span class="normal">MaIAte</span><span class="destaque">SOftwares</span>
         </div>
-    </header>
+        <nav style="display: flex; gap: 28px; flex-shrink: 0;">
+            <a href="index.html" style="color: #aab; text-decoration: none; font-size: 14px; font-weight: 500;">Início</a>
+            <a href="produtos.html" class="ativo" style="color: #00d4ff; text-decoration: none; font-size: 14px; font-weight: 500; position: relative;">Produtos</a>
+            <a href="contato.html" style="color: #aab; text-decoration: none; font-size: 14px; font-weight: 500;">Contato</a>
+        </nav>
+    </div>
+</header>
 
-    <!-- CONTEÚDO -->
-    <section class="detalhes">
-        <div class="container">
+<section class="detalhes">
+    <div class="container">
 
-            <span class="icone-grande">📊</span>
-            <h1>WM Meu Negócio</h1>
-            <p class="subtitulo">A gestão que seu negócio merece!</p>
+        <span class="icone-grande">📊</span>
+        <h1>WM Meu Negócio</h1>
+        <p class="subtitulo">Sistema de gestão para pequenos empreendimentos com controle financeiro, clientes e produtos</p>
 
-            <div class="descricao">
-                <p><strong>O que é o WM Meu Negócio?</strong></p>
-                <p>O WM Meu Negócio é um sistema de gestão desenvolvido especialmente para pequenas empresas e microempreendedores individuais (MEIs). Ele reúne em um único lugar tudo o que você precisa para gerenciar seu negócio de forma simples, prática e profissional.</p>
-                <p>Com uma interface intuitiva e fácil de usar, você controla orçamentos, clientes, produtos, fluxo de caixa e muito mais — tudo sem complicação e sem precisar de conhecimentos técnicos.</p>
-            </div>
-
-            <h2>🎯 Para quem é o WM Meu Negócio?</h2>
-            <div class="descricao" style="text-align:center; max-width:700px;">
-                <p style="font-size:15px;">MEIs que precisam organizar suas finanças · Pequenas empresas · Profissionais autônomos · Lojas e comércios · Prestadores de serviço</p>
-            </div>
-
-            <h2>⚡ Principais Funcionalidades</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-item">
-                    <span class="icone">📄</span>
-                    <h4>Geração de Orçamentos</h4>
-                    <p>Crie orçamentos com aparência profissional em PDF, envie por e-mail e compartilhe via WhatsApp</p>
-                </div>
-                <div class="beneficio-item">
-                    <span class="icone">👤</span>
-                    <h4>Cadastro de Clientes</h4>
-                    <p>Armazene nome, CPF/CNPJ, telefone, e-mail e endereço. Busca rápida e histórico de orçamentos</p>
-                </div>
-                <div class="beneficio-item">
-                    <span class="icone">📦</span>
-                    <h4>Controle de Produtos</h4>
-                    <p>Cadastre produtos com preço de custo e venda, controle de estoque e alertas de estoque baixo</p>
-                </div>
-                <div class="beneficio-item">
-                    <span class="icone">💰</span>
-                    <h4>Fluxo de Caixa</h4>
-                    <p>Registre entradas e saídas, categorias personalizadas, saldo atualizado e exportação para Excel</p>
-                </div>
-                <div class="beneficio-item">
-                    <span class="icone">📊</span>
-                    <h4>Relatórios Gerenciais</h4>
-                    <p>Vendas por período, produtos mais vendidos, clientes que mais compram e taxa de conversão</p>
-                </div>
-                <div class="beneficio-item">
-                    <span class="icone">🔒</span>
-                    <h4>Segurança e Licenciamento</h4>
-                    <p>Dados armazenados localmente, backup e restauração, ativação por chave de licença</p>
-                </div>
-            </div>
-
-            <h2>⭐ Diferenciais</h2>
-            <div class="tabela-diferenciais">
-                <div class="linha">
-                    <span class="item">Interface limpa e intuitiva</span>
-                    <span class="desc">Fácil de usar, sem complicação</span>
-                </div>
-                <div class="linha">
-                    <span class="item">Temas Claro/Escuro</span>
-                    <span class="desc">Conforto visual para qualquer ambiente</span>
-                </div>
-                <div class="linha">
-                    <span class="item">Totais automáticos</span>
-                    <span class="desc">Subtotal, desconto, frete e total calculados na hora</span>
-                </div>
-                <div class="linha">
-                    <span class="item">PDF profissional</span>
-                    <span class="desc">Orçamentos com logo, dados da empresa e validade</span>
-                </div>
-                <div class="linha">
-                    <span class="item">Tudo offline</span>
-                    <span class="desc">Seus dados ficam no seu computador, sem nuvem</span>
-                </div>
-                <div class="linha">
-                    <span class="item">Suporte a Excel</span>
-                    <span class="desc">Importe e exporte seus dados facilmente</span>
-                </div>
-            </div>
-
-            <h2>📋 Requisitos Técnicos</h2>
-            <div class="requisitos">
-                <ul>
-                    <li>Windows 7, 8, 10 ou 11</li>
-                    <li>Espaço em disco: ~100 MB</li>
-                    <li>Memória RAM: 1 GB (recomendado)</li>
-                    <li>Internet: Apenas para ativação da licença</li>
-                </ul>
-            </div>
-
-            <h2>💰 Planos</h2>
-            <div class="planos">
-                <div class="plano-card">
-                    <div class="nome">Teste Grátis</div>
-                    <div class="preco">R$ 0,00</div>
-                    <div class="desc">3 dias com todas as funções</div>
-                    <a href="/downloads/WM_Meu_Negocio_Setup.rar" class="btn btn-primary" style="padding: 14px 36px; border-radius: 40px; font-size: 15px; font-weight: 600; transition: all 0.25s; border: none; cursor: pointer; background: #00d4ff; color: #0b0b1a; text-decoration: none; display: inline-block;">📥 Testar Agora</a>
-                </div>
-                <div class="plano-card">
-                    <div class="nome">Perpétua</div>
-                    <div class="preco">R$ 99,00</div>
-                    <div class="desc">Pague uma única vez e use pra sempre!</div>
-                    <a href="#" class="btn btn-success" onclick="comprar('wmmeunegocio')">💳 Comprar</a>
-                </div>
-            </div>
-
-            <h2>📞 Suporte e Contato</h2>
-            <div class="suporte">
-                <p>Dúvidas, sugestões ou problemas técnicos?</p>
-                <p>E-mail: <a href="mailto:contato@maiatesoftwares.com.br">contato@maiatesoftwares.com.br</a></p>
-                <p>WhatsApp: <a href="https://wa.me/5548974007782" target="_blank">(48) 97400-7782</a></p>
-                <p>Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank">@maiate_softwares</a></p>
-                <p style="font-size:13px; color:#667; margin-top:12px;">Manual do Usuário incluso com o software</p>
-            </div>
-
+        <div class="descricao">
+            <p>Organize suas vendas e negócios em uma única plataforma com o WM Meu Negócio, a ferramenta definitiva para gestão de pequenos empreendimentos.</p>
+            <p>Desenvolvido para empreendedores, MEIs e pequenas empresas que buscam simplicidade e eficiência no dia a dia.</p>
         </div>
-    </section>
 
-    <!-- RODAPÉ -->
-    <footer class="rodape">
-        <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
-    </footer>
+        <h2>⚡ Por que escolher o WM Meu Negócio?</h2>
+        <div class="beneficios-grid">
+            <div class="beneficio-item">
+                <span class="icone">📋</span>
+                <h4>Gestão de Clientes</h4>
+                <p>Cadastre e organize seus clientes com histórico de compras e contatos.</p>
+            </div>
+            <div class="beneficio-item">
+                <span class="icone">📦</span>
+                <h4>Controle de Produtos</h4>
+                <p>Gerencie seu estoque, preços e categorias de produtos de forma simples.</p>
+            </div>
+            <div class="beneficio-item">
+                <span class="icone">💰</span>
+                <h4>Orçamentos e Vendas</h4>
+                <p>Crie orçamentos, converta em vendas e acompanhe o faturamento do seu negócio.</p>
+            </div>
+            <div class="beneficio-item">
+                <span class="icone">📊</span>
+                <h4>Relatórios Financeiros</h4>
+                <p>Visualize gráficos e relatórios de lucro, despesas e metas de vendas.</p>
+            </div>
+        </div>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function comprar(produto) {
-            fetch('/criar_pagamento/' + produto)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.url) {
-                        window.location.href = data.url;
-                    } else {
-                        alert('Erro ao criar pagamento: ' + data.erro);
-                    }
-                })
-                .catch(error => {
-                    alert('Erro de conexão: ' + error);
-                });
-        }
-    </script>
+        <h2>📋 Funcionalidades principais</h2>
+        <div class="tabela-funcionalidades">
+            <div class="linha">
+                <span class="modulo">Clientes</span>
+                <span class="recursos">Cadastro, histórico de compras, contatos, busca rápida e classificação</span>
+            </div>
+            <div class="linha">
+                <span class="modulo">Produtos</span>
+                <span class="recursos">Cadastro, estoque, preços, categorias, imagens e controle de entrada/saída</span>
+            </div>
+            <div class="linha">
+                <span class="modulo">Orçamentos</span>
+                <span class="recursos">Criação, edição, conversão em venda, impressão e envio por e-mail</span>
+            </div>
+            <div class="linha">
+                <span class="modulo">Financeiro</span>
+                <span class="recursos">Relatórios de faturamento, lucro, metas, despesas e gráficos interativos</span>
+            </div>
+            <div class="linha">
+                <span class="modulo">Configurações</span>
+                <span class="recursos">Ajuste de impostos, moeda, notificações e backup automático</span>
+            </div>
+        </div>
+
+        <h2>📋 Requisitos do sistema</h2>
+        <div class="requisitos">
+            <ul>
+                <li>Windows 10 ou 11 (64 bits)</li>
+                <li>RAM: Mínimo 4 GB | Recomendado 8 GB</li>
+                <li>Processador: Intel Core i3 (mínimo) | Core i5/Ryzen 5 (recomendado)</li>
+                <li>Espaço em disco: 500 MB livre</li>
+                <li>Resolução: 1366×768 (mínimo) | 1920×1080 (recomendado)</li>
+                <li>Conexão com internet: Necessária apenas para ativação da licença</li>
+                <li>Não compatível com Windows 7, 8, 8.1, XP ou Vista</li>
+                <li>Visual C++ Redistributable 2015-2022 (x64) necessário</li>
+            </ul>
+        </div>
+
+<h2>💰 Planos</h2>
+<div class="planos">
+    <div class="plano-card">
+        <div class="nome">Teste Grátis</div>
+        <div class="preco">R$ 0,00</div>
+        <div class="desc">3 dias com todas as funções</div>
+        <a href="/downloads/WM_Meu_Negocio_Setup.rar" class="btn btn-primary" style="padding: 14px 36px; border-radius: 40px; font-size: 15px; font-weight: 600; transition: all 0.25s; border: none; cursor: pointer; background: #00d4ff; color: #0b0b1a; text-decoration: none; display: inline-block;">📥 Testar Agora</a>
+    </div>
+    <div class="plano-card">
+        <div class="nome">Vitalícia</div>
+        <div class="preco">R$ 199,00</div>
+        <div class="desc">Pague uma única vez e use pra sempre!</div>
+
+        <a href="#" class="btn btn-success" onclick="comprar('wmmeunegocio')">💳 Comprar</a>
+
+    </div>
+</div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="produtos.html" class="btn-voltar">← Voltar para Produtos</a>
+        </div>
+
+        <h2>📞 Suporte e contato</h2>
+        <div class="suporte">
+            <p>Dúvidas, sugestões ou problemas técnicos?</p>
+            <p>E-mail: <a href="mailto:contato@maiatesoftwares">contato@maiatesoftwares</a></p>
+            <p style="font-size:13px; color:#667; margin-top:12px;">© Direitos autorais — Este software é registrado e protegido por leis de direitos autorais. A licença é pessoal e intransferível.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer class="rodape">
+    <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
+    <p style="font-size:12px; color:#445;">A ferramenta auxilia, mas o olhar do perito é insubstituível.</p>
+    <p style="margin-top: 12px; font-size: 16px;">📱 Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; font-size: 16px;">@maiate_softwares</a></p>
+</footer>
+
+<script>
+function comprar(produto) {
+    fetch('/criar_pagamento/' + produto)
+        .then(response => response.json())
+        .then(data => {
+            if (data.url) {
+                window.location.href = data.url;
+            } else {
+                alert('Erro ao criar pagamento: ' + data.erro);
+            }
+        })
+        .catch(error => {
+            alert('Erro de conexão: ' + error);
+        });
+}
+</script>
 
 </body>
 </html>

@@ -8,45 +8,39 @@ WARNING: This is a development server. Do not use it in a production deployment.
 Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 105-028-561
-127.0.0.1 - - [05/Aug/2026 02:09:04] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.1" 200 -
-127.0.0.1 - - [05/Aug/2026 02:15:19] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.1" 200 -
-127.0.0.1 - - [05/Aug/2026 02:18:51] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.1" 200 -
-127.0.0.1 - - [05/Aug/2026 02:21:48] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:21:58] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:22:14] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:40:26] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:41:01] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:41:52] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:42:36] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:42:48] "GET /criar_pagamento/wmmeunegocio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:49:09] "GET /criar_pagamento/grafolaudo_anual HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:49:16] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:49:56] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:54:09] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:54:14] "GET /criar_pagamento/wmmeunegocio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:55:49] "GET /criar_pagamento/wmmeunegocio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 02:58:29] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 03:05:50] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 15:40:31] "GET /criar_pagamento/grafolaudo_vitalicio HTTP/1.0" 200 -
-127.0.0.1 - - [05/Aug/2026 22:50:26] "GET /criar_pagamento/maiatemixer HTTP/1.0" 200 -
- * Detected change in '/var/www/maiatesoftwares/app.py', reloading
+ * Debugger PIN: 960-946-700
+127.0.0.1 - - [08/Aug/2026 02:29:59] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:30:03] "POST /baixar/GrafoLaudo HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:32:25] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:39:02] "GET /baixar/WM_Meu_Negocio HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:39:07] "POST /baixar/WM_Meu_Negocio HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:42:35] "GET /baixar/MaiateMixer HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/var/www/html/app.py", line 204, in baixar
+    return send_file(f'/var/www/html/downloads/{produto}_Setup.rar')
+  File "/home/maiate/.local/lib/python3.10/site-packages/flask/helpers.py", line 518, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/home/maiate/.local/lib/python3.10/site-packages/werkzeug/utils.py", line 421, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/downloads/MaiateMixer_Setup.rar'
+127.0.0.1 - - [08/Aug/2026 02:42:35] "GET /baixar/MaiateMixer?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:42:35] "GET /baixar/MaiateMixer?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Aug/2026 02:42:35] "GET /baixar/MaiateMixer?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/var/www/html/app.py', reloading
  * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 105-028-561
- * Detected change in '/var/www/maiatesoftwares/app.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 105-028-561
- * Detected change in '/var/www/maiatesoftwares/app.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 105-028-561
- * Detected change in '/var/www/maiatesoftwares/app.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 105-028-561
- * Detected change in '/var/www/maiatesoftwares/app.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 105-028-561
+  File "/var/www/html/app.py", line 30
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+                               ^
+SyntaxError: invalid decimal literal
