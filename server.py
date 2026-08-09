@@ -113,8 +113,9 @@ def criar_licenca_keygen(email_cliente, produto_id):
 EMAIL_HOST = "smtp-relay.brevo.com"
 EMAIL_PORT = 587
 EMAIL_USER = "b4b172001@smtp-brevo.com"
-EMAIL_PASSWORD = "xsmtpsib-0d3d0755b0107c0c71330412fc730fe71c48743aa95ea2abc8a8ff328177e50c-qdZqQP0JFZSVZ59c"
+EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD', '')
 EMAIL_FROM = "contato@maiatesoftwares.com.br"
+
 
 # ===== FUNÇÃO PARA ENVIAR E-MAIL =====
 def enviar_email(destino, chave, produto):
