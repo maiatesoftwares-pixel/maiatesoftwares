@@ -4,3 +4,5 @@ rge,vendas@composeg.com.br,GrafoLaudo
 wetw,bigles21@gmail.com,WM_Meu_Negocio
 srer,vendas@composeg.com.br,GrafoLaudo
 serwe,vendas@composeg.com.br,WM_Meu_Negocio
+wewer,perito.wagner.maiate@gmail.com,WM_Meu_Negocio
+wawa,maiategames@gmail.com,WM_Meu_Negocio

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+WEBHOOK_SECRET = "c99027a12825f6310cf7813088f9f0c501097880a27db1effd1fbe40ed8af822"
 from flask import Flask, jsonify, request, send_file, make_response
 import mercadopago
 import requests
@@ -21,6 +22,15 @@ KEYGEN_POLICY_MAIATE = "26c8de16-db97-4cbc-ad1a-c6f17ef06d9a"
 KEYGEN_POLICY_WM = "06764b75-7264-4808-a4e4-007fa2b5595e"
 KEYGEN_POLICY_GRAFOTECNICA = "bf6855b6-d23b-47bd-8323-85255a635b5b"
 
+
+# ===== CONFIGURAÇÃO DO E-MAIL =====
+# ===== CONFIGURAÇÃO DO E-MAIL =====
+EMAIL_HOST = "smtp-relay.brevo.com"
+EMAIL_PORT = 587
+EMAIL_USER = "b4b172001@smtp-brevo.com"
+EMAIL_PASSWORD = "xsmtpsib-0d3d0755b0107c0c71330412fc730fe71c48743aa95ea2abc8a8ff328177e50c-qdZqQP0JFZSVZ59c"
+EMAIL_FROM = "contato@maiatesoftwares.com.br"
+
 # Inicializa o SDK do Mercado Pago
 sdk = mercadopago.SDK(ACCESS_TOKEN)
 
@@ -40,7 +50,7 @@ PRODUTOS = {
     },
     'wmmeunegocio': {
         'nome': 'WM Meu Negocio - Licenca Perpetua',
-        'preco': 99.00
+        'preco': 1.00
     },
     'grafotecnica': {
         'nome': 'Tabela Grafotecnica WM - Licenca Vitalicia',
@@ -161,10 +171,15 @@ def webhook():
 
             if response.status_code == 200:
                 payment_data = response.json()
+                print(f"Status do pagamento: {payment_data.get('status')}")
+                print(f"Descrição: {payment_data.get('description')}")
+
                 if payment_data.get('status') == 'approved':
                     email = payment_data.get('payer', {}).get('email', 'cliente@email.com')
                     description = payment_data.get('description', '')
                     produto_id = None
+
+                    print(f"🔍 Descrição recebida: '{description}'")
 
                     if 'grafolaudo_anual' in description.lower():
                         produto_id = 'grafolaudo_anual'
@@ -172,24 +187,29 @@ def webhook():
                         produto_id = 'grafolaudo_vitalicio'
                     elif 'maiatemixer' in description.lower():
                         produto_id = 'maiatemixer'
-                    elif 'wmmeunegocio' in description.lower():
+                    elif 'wmmeunegocio' in description.lower() or 'wm meu negocio' in description.lower():
                         produto_id = 'wmmeunegocio'
                     elif 'grafotecnica' in description.lower():
                         produto_id = 'grafotecnica'
 
+                    print(f"🆔 Produto identificado: {produto_id}")
+
                     if produto_id:
                         chave = criar_licenca_keygen(email, produto_id)
                         if chave:
-                            print(f"Licenca gerada: {chave} para {email}")
+                            print(f"✅ Licença gerada: {chave} para {email}")
+                            enviar_email(email, chave, produto_id)
                         else:
-                            print(f"Falha ao gerar licenca para {email}")
+                            print(f"❌ Falha ao gerar licença para {email}")
                     else:
-                        print(f"Produto nao identificado: {description}")
+                        print(f"⚠️ Produto não identificado: {description}")
 
         return jsonify({"status": "ok"}), 200
+
     except Exception as e:
         print(f"ERRO no webhook: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
+
 
 # ===== ROTA PARA TESTAR =====
 @app.route('/')
@@ -238,10 +258,10 @@ def baixar(produto):
                 padding: 30px;
                 border-radius: 12px;
                 border: 1px solid #2d3748;
-                width: 320px;
+                width: 340px;
                 text-align: center;
             }}
-            input {{
+            input, select {{
                 width: 100%;
                 padding: 10px;
                 margin: 8px 0;
@@ -250,6 +270,14 @@ def baixar(produto):
                 background: #0f172a;
                 color: #fff;
                 box-sizing: border-box;
+            }}
+            select {{
+                appearance: none;
+                cursor: pointer;
+            }}
+            select option {{
+                background: #1a1a2e;
+                color: #fff;
             }}
             button {{
                 width: 100%;
@@ -261,6 +289,7 @@ def baixar(produto):
                 font-weight: bold;
                 cursor: pointer;
                 font-size: 16px;
+                margin-top: 8px;
             }}
             button:hover {{
                 background: #00b8e6;
@@ -273,17 +302,51 @@ def baixar(produto):
     </head>
     <body>
         <div class="box">
-            <h2>Baixar {produto}</h2>
+            <h2>📥 Baixar {produto}</h2>
             <p style="font-size: 14px; color: #9ca3af;">Preencha para baixar o software</p>
             <form method="POST">
                 <input type="text" name="nome" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
+                <select name="estado" required>
+                    <option value="">Selecione seu estado</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
                 <button type="submit">Baixar agora</button>
             </form>
         </div>
     </body>
     </html>
     '''
+
+
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
