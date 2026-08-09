@@ -15,11 +15,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaIAte SOftwares | Tecnologia para Peritos e Criadores</title>
-        <meta name="description" content="MaIAte SOftwares - Soluções em perÃ­cia grafotÃ©cnica, mixagem de Ã¡udio e gestÃ£o para MEI. Baixe e teste grÃ¡tis!">
+        <meta name="description" content="MaIAte SOftwares - SoluÃ§Ãµes em perÃÂ­cia grafotÃÂ©cnica, mixagem de ÃÂ¡udio e gestÃÂ£o para MEI. Baixe e teste grÃÂ¡tis!">
 
     <style>
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
             background: #0b0b1a;
@@ -119,7 +118,7 @@
             font-weight: 400;
         }
 
-        /* ===== SEÃ‡ÃƒO PRODUTOS ===== */
+        /* ===== SEÃâ¡ÃÆO PRODUTOS ===== */
         .section-produtos {
             padding: 40px 0 60px;
             background: #0f0f22;
@@ -224,7 +223,7 @@
             color: #00d4ff;
         }
 
-        /* ===== RODAPÃ‰ ===== */
+        /* ===== RODAPÃâ° ===== */
         .rodape {
             text-align: center;
             padding: 40px 20px;
@@ -310,7 +309,7 @@
                 <span class="normal">MaIAte</span><span class="destaque">SOftwares</span>
             </div>
             <nav class="nav">
-                <a href="index.html" class="ativo">Início</a>
+                <a href="index.html" class="ativo">InÃ­cio</a>
                 <a href="produtos.html">Produtos</a>
                 <a href="contato.html">Contato</a>
             </nav>
@@ -330,31 +329,31 @@
     <section class="section-produtos" id="produtos">
         <div class="container">
             <h2>Produtos</h2>
-            <p class="subtitulo">Soluções desenvolvidas para resolver problemas reais</p>
+            <p class="subtitulo">SoluÃ§Ãµes desenvolvidas para resolver problemas reais</p>
 
             <div class="grid">
             <!-- GrafoLaudo Analyzer Pro - Anual -->
 <div class="card">
-    <span class="icone">🔬</span>
+    <span class="icone">ð¬</span>
     <h3>GrafoLaudo Analyzer Pro - Anual</h3>
-    <p>Software para perícia grafotécnica/digital. Análise de assinaturas, medições, sobreposição e muito mais!</p>
-    <div class="preco">💰 Anual: R$ 399,00</div>
+    <p>Software para perÃ­cia grafotÃ©cnica/digital. AnÃ¡lise de assinaturas, mediÃ§Ãµes, sobreposiÃ§Ã£o e muito mais!</p>
+    <div class="preco">ð° Anual: R$ 399,00</div>
     <div class="btn-group-card">
-        <a href="/baixar/GrafoLaudo" class="btn-sm btn-sm-primary">📥 Baixar</a>
-        <a href="/comprar/grafolaudo_anual" class="btn-sm btn-sm-success">💳 Comprar</a>
+        <a href="/baixar/GrafoLaudo" class="btn-sm btn-sm-primary">ð¥ Baixar</a>
+        <a href="/comprar/grafolaudo_anual" class="btn-sm btn-sm-success">ð³ Comprar</a>
         <a href="grafolaudo.html" class="btn-sm btn-sm-outline">Detalhes</a>
     </div>
 </div>
 
-           <!-- GrafoLaudo Analyzer Pro - Vitalícia -->
+           <!-- GrafoLaudo Analyzer Pro - VitalÃ­cia -->
 <div class="card">
-    <span class="icone">🔬</span>
-    <h3>GrafoLaudo Analyzer Pro - Vitalícia</h3>
-    <p>Software para perícia grafotécnica/digital. Análise de assinaturas, medições, sobreposição e muito mais!</p>
-    <div class="preco">💰 Vitalícia: R$ 699,00</div>
+    <span class="icone">ð¬</span>
+    <h3>GrafoLaudo Analyzer Pro - VitalÃ­cia</h3>
+    <p>Software para perÃ­cia grafotÃ©cnica/digital. AnÃ¡lise de assinaturas, mediÃ§Ãµes, sobreposiÃ§Ã£o e muito mais!</p>
+    <div class="preco">ð° VitalÃ­cia: R$ 699,00</div>
     <div class="btn-group-card">
-        <a href="/baixar/GrafoLaudo" class="btn-sm btn-sm-primary">📥 Baixar</a>
-        <a href="/comprar/grafolaudo_vitalicio" class="btn-sm btn-sm-success">💳 Comprar</a>
+        <a href="/baixar/GrafoLaudo" class="btn-sm btn-sm-primary">ð¥ Baixar</a>
+        <a href="/comprar/grafolaudo_vitalicio" class="btn-sm btn-sm-success">ð³ Comprar</a>
         <a href="grafolaudo.html" class="btn-sm btn-sm-outline">Detalhes</a>
     </div>
 </div>
@@ -362,55 +361,58 @@
 
             <!-- Maiate Mixer -->
             <div class="card">
-                <span class="icone">🎛️</span>
+                <span class="icone">ðï¸</span>
                 <h3>Maiate Mixer</h3>
-                <p>Mixagem de áudio profissional com efeitos em tempo real, equalização e exportação em alta qualidade.</p>
-                <div class="preco">💰 Vitalícia: R$ 199,00</div>
+                <p>Mixagem de Ã¡udio profissional com efeitos em tempo real, equalizaÃ§Ã£o e exportaÃ§Ã£o em alta qualidade.</p>
+                <div class="preco">ð° VitalÃ­cia: R$ 199,00</div>
                 <div class="btn-group-card">
-                    <a href="/baixar/MaiateMixer" class="btn-sm btn-sm-primary">📥 Baixar</a>
-                    <a href="/comprar/maiatemixer" class="btn-sm btn-sm-success">💳 Comprar</a>                   
+                    <a href="/baixar/MaiateMixer" class="btn-sm btn-sm-primary">ð¥ Baixar</a>
+                    <a href="/comprar/maiatemixer" class="btn-sm btn-sm-success">ð³ Comprar</a>                   
                     <a href="maiatemixer.html" class="btn-sm btn-sm-outline">Detalhes</a>
                 </div>
             </div>
 
-            <!-- WM Meu Negócio -->
+            <!-- WM Meu NegÃ³cio -->
             <div class="card">
-                <span class="icone">📊</span>
-                <h3>WM Meu Negócio</h3>
-                <p>Sistema de gestão de clientes, produtos e orçamentos. Organize suas vendas e negócios em um só lugar.</p>
-                <div class="preco">💰 Perpétua: R$ 99,00</div>
+                <span class="icone">ð</span>
+                <h3>WM Meu NegÃ³cio</h3>
+                <p>Sistema de gestÃ£o de clientes, produtos e orÃ§amentos. Organize suas vendas e negÃ³cios em um sÃ³ lugar.</p>
+                <div class="preco">ð° PerpÃ©tua: R$ 99,00</div>
                 <div class="btn-group-card">
-                    <a href="/baixar/WM_Meu_Negocio" class="btn-sm btn-sm-primary">📥 Baixar</a>
-                    <a href="/comprar/wmmeunegocio" class="btn-sm btn-sm-success">💳 Comprar</a>    
+                    <a href="/baixar/WM_Meu_Negocio" class="btn-sm btn-sm-primary">ð¥ Baixar</a>
+                    <a href="/comprar/wmmeunegocio" class="btn-sm btn-sm-success">ð³ Comprar</a>    
                     <a href="wmmeunegocio.html" class="btn-sm btn-sm-outline">Detalhes</a>
                 </div>
             </div>            
-         <!-- Tabela Grafotécnica WM -->
+         <!-- Tabela GrafotÃ©cnica WM -->
          
          
-        <!-- Tabela Grafotécnica WM -->
+        <!-- Tabela GrafotÃ©cnica WM -->
         <div class="card">
-            <span class="icone">🔬</span>
-            <h3>Tabela Grafotécnica WM</h3>
-            <p>Ferramenta pericial para análise comparativa de escrita com 25 características avaliadas. Ideal para laudos e perícias.</p>
-            <div class="preco">💰 Perpétua: R$ 89,90</div>
+            <span class="icone">ð¬</span>
+            <h3>Tabela GrafotÃ©cnica WM</h3>
+            <p>Ferramenta pericial para anÃ¡lise comparativa de escrita com 25 caracterÃ­sticas avaliadas. Ideal para laudos e perÃ­cias.</p>
+            <div class="preco">ð° PerpÃ©tua: R$ 89,90</div>
             <div class="btn-group-card">
-                <a href="anuncio-grafotecnica.html" class="btn-sm btn-sm-primary">📋 Ver Tabela</a>
-                <a href="/comprar/grafotecnica" class="btn-sm btn-sm-success">💳 Comprar</a>            
+                <a href="anuncio-grafotecnica.html" class="btn-sm btn-sm-primary">ð Ver Tabela</a>
+                <a href="/comprar/grafotecnica" class="btn-sm btn-sm-success">ð³ Comprar</a>            
                 <a href="wm-grafotecnica.html" class="btn-sm btn-sm-outline">Detalhes</a>
             </div>
         </div>
 
     </section>
-    <!-- ===== RODAPÉ ===== -->
-<footer class="rodape">
-    <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
-    <p class="made-in">🇧🇷 Feito com precisão no Brasil</p>
-        <p style="margin-top: 12px; font-size: 16px;">📱 Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; transition: 0.2s;" onmouseover="this.style.color='#3b82f6'; this.style.textDecoration='underline';" onmouseout="this.style.color='#00d4ff'; this.style.textDecoration='none';">@maiate_softwares</a></p>   
-        <a href="politica-privacidade.html" style="color: #6b7280; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#00d4ff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6b7280'; this.style.textDecoration='none';">Política de Privacidade</a> |
-        <a href="termos-uso.html" style="color: #6b7280; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#00d4ff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6b7280'; this.style.textDecoration='none';">Termos de Uso</a> |
-        <a href="politica-cookies.html" style="color: #6b7280; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#00d4ff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6b7280'; this.style.textDecoration='none';">Política de Cookies</a>
-    </p>
+
+    <!-- ===== RODAPÃâ° ===== -->
+    <footer class="rodape">
+        <p>ÃÂ© 2026 <a href="index.html">MaIAte SOftwares</a> Ã¢â¬â Todos os direitos reservados</p>
+        <p class="made-in">Ã°Å¸â¡Â§Ã°Å¸â¡Â· Feito com precisÃÂ£o no Brasil</p>
+    <p style="margin-top: 12px; font-size: 16px;">Ã°Å¸âÂ± Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; font-size: 16px;">@maiate_softwares</a></p>
+<p style="margin-top: 8px; font-size: 12px;">
+    <a href="politica-privacidade.html" style="color: #6b7280; text-decoration: none;">PolÃ­tica de Privacidade</a> |
+    <a href="termos-uso.html" style="color: #6b7280; text-decoration: none;">Termos de Uso</a> |
+    <a href="politica-cookies.html" style="color: #6b7280; text-decoration: none;">PolÃ­tica de Cookies</a>
+</p>
+
 </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
@@ -426,7 +428,7 @@
                     }
                 })
                 .catch(error => {
-                    alert('Erro de conexÃ£o: ' + error);
+                    alert('Erro de conexÃÂ£o: ' + error);
                 });
         }
     </script>

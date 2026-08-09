@@ -18,8 +18,7 @@
         <meta name="description" content="MaIAte SOftwares - Soluções em perÃ­cia grafotÃ©cnica, mixagem de Ã¡udio e gestÃ£o para MEI. Baixe e teste grÃ¡tis!">
 
     <style>
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
             background: #0b0b1a;
@@ -402,15 +401,18 @@
         </div>
 
     </section>
-    <!-- ===== RODAPÉ ===== -->
-<footer class="rodape">
-    <p>© 2026 <a href="index.html">MaIAte SOftwares</a> — Todos os direitos reservados</p>
-    <p class="made-in">🇧🇷 Feito com precisão no Brasil</p>
-        <p style="margin-top: 12px; font-size: 16px;">📱 Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; transition: 0.2s;" onmouseover="this.style.color='#3b82f6'; this.style.textDecoration='underline';" onmouseout="this.style.color='#00d4ff'; this.style.textDecoration='none';">@maiate_softwares</a></p>   
-        <a href="politica-privacidade.html" style="color: #6b7280; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#00d4ff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6b7280'; this.style.textDecoration='none';">Política de Privacidade</a> |
-        <a href="termos-uso.html" style="color: #6b7280; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#00d4ff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6b7280'; this.style.textDecoration='none';">Termos de Uso</a> |
-        <a href="politica-cookies.html" style="color: #6b7280; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#00d4ff'; this.style.textDecoration='underline';" onmouseout="this.style.color='#6b7280'; this.style.textDecoration='none';">Política de Cookies</a>
-    </p>
+
+    <!-- ===== RODAPÃ‰ ===== -->
+    <footer class="rodape">
+        <p>© 2026 <a href="index.html">MaIAte SOftwares</a> â€” Todos os direitos reservados</p>
+        <p class="made-in">ðŸ‡§ðŸ‡· Feito com precisÃ£o no Brasil</p>
+    <p style="margin-top: 12px; font-size: 16px;">ðŸ“± Siga a gente no Instagram: <a href="https://www.instagram.com/maiate_softwares/" target="_blank" style="color: #00d4ff; text-decoration: none; font-weight: 600; font-size: 16px;">@maiate_softwares</a></p>
+<p style="margin-top: 8px; font-size: 12px;">
+    <a href="politica-privacidade.html" style="color: #6b7280; text-decoration: none;">Política de Privacidade</a> |
+    <a href="termos-uso.html" style="color: #6b7280; text-decoration: none;">Termos de Uso</a> |
+    <a href="politica-cookies.html" style="color: #6b7280; text-decoration: none;">Política de Cookies</a>
+</p>
+
 </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
