@@ -1,23 +1,13 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request, jsonify, send_file, render_template
 from flask import Flask, jsonify, request, send_file, make_response, session, redirect
 import mercadopago
 import requests
 import json
 import os
 import uuid
-from flask import send_file
+
 app = Flask(__name__)
 app.secret_key = 'MaiateSoftwares2026SecretKey'
-
-# ===== ARQUIVOS ESTÁTICOS =====
-@app.route('/<path:filename>')
-def serve_static(filename):
-    return send_file(filename)
-
-@app.route('/')
-def home():
-    return send_file('index.html')
 
 # ===== SUAS CHAVES =====
 PUBLIC_KEY = "APP_USR-d1318a48-c04c-4651-815c-dd148d1bf416"
@@ -309,6 +299,11 @@ def webhook():
     except Exception as e:
         print(f"ERRO no webhook: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
+
+# ===== ROTA PARA TESTAR =====
+@app.route('/')
+def home():
+    return jsonify({'status': 'API de pagamentos funcionando!'})
 
 # ===== ROTA DE DOWNLOAD COM COOKIE =====
 @app.route('/baixar/<produto>', methods=['GET', 'POST'])

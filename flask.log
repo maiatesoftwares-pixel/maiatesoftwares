@@ -1,46 +1,61 @@
-nohup: ignoring input
- * Serving Flask app 'app'
- * Debug mode: on
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://178.253.250.117:5000
-Press CTRL+C to quit
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 508-556-668
-127.0.0.1 - - [09/Aug/2026 06:02:29] "GET /comprar/wmmeunegocio HTTP/1.1" 200 -
-/var/www/html/app.py:448: DeprecationWarning: notification_url is deprecated; use Webhooks instead. See https://www.mercadopago.com/developers/en/docs/your-integrations/notifications/webhooks
-  preference = sdk.preference().create(preference_data)
-127.0.0.1 - - [09/Aug/2026 06:02:37] "POST /comprar/wmmeunegocio HTTP/1.1" 302 -
-127.0.0.1 - - [09/Aug/2026 06:03:41] "POST /webhook?id=43427157863&topic=merchant_order HTTP/1.1" 200 -
-127.0.0.1 - - [09/Aug/2026 06:03:42] "POST /webhook?id=172847675270&topic=payment HTTP/1.1" 200 -
-127.0.0.1 - - [09/Aug/2026 06:03:42] "POST /webhook?id=43427157863&topic=merchant_order HTTP/1.1" 200 -
-127.0.0.1 - - [09/Aug/2026 06:03:42] "POST /webhook?data.id=172847675270&type=payment HTTP/1.1" 200 -
-127.0.0.1 - - [09/Aug/2026 06:03:55] "POST /webhook?id=172847675270&topic=payment HTTP/1.1" 200 -
-127.0.0.1 - - [09/Aug/2026 06:03:56] "POST /webhook?id=43427157863&topic=merchant_order HTTP/1.1" 200 -
-127.0.0.1 - - [09/Aug/2026 06:03:57] "POST /webhook?data.id=172847675270&type=payment HTTP/1.1" 200 -
- * Detected change in '/var/www/html/app.py', reloading
-Webhook recebido: {'resource': 'https://api.mercadolibre.com/merchant_orders/43427157863', 'topic': 'merchant_order'}
-Webhook recebido: {'action': 'payment.created', 'api_version': 'v1', 'data': {'id': '172847675270'}, 'date_created': '2026-08-09T03:03:41Z', 'id': 136098809982, 'live_mode': True, 'type': 'payment', 'user_id': '1315684502'}
-Webhook recebido: {'resource': '172847675270', 'topic': 'payment'}
-Webhook recebido: {'resource': 'https://api.mercadolibre.com/merchant_orders/43427157863', 'topic': 'merchant_order'}
-Status do pagamento: pending
-Descrição: WM Meu Negocio - Licenca Perpetua
-👤 Dados do pagador: {'email': None, 'entity_type': None, 'first_name': None, 'id': '3603454986', 'identification': {'number': None, 'type': None}, 'last_name': None, 'operator_id': None, 'phone': {'number': None, 'extension': None, 'area_code': None}, 'type': None}
-Webhook recebido: {'action': 'payment.updated', 'api_version': 'v1', 'data': {'id': '172847675270'}, 'date_created': '2026-08-09T03:03:41Z', 'id': 136098944648, 'live_mode': True, 'type': 'payment', 'user_id': '1315684502'}
-Webhook recebido: {'resource': '172847675270', 'topic': 'payment'}
-Status do pagamento: approved
-Descrição: WM Meu Negocio - Licenca Perpetua
-👤 Dados do pagador: {'email': 'XXXXXXXXXXX', 'entity_type': None, 'first_name': None, 'id': '3603454986', 'identification': {'number': None, 'type': None}, 'last_name': None, 'operator_id': None, 'phone': {'number': None, 'extension': None, 'area_code': None}, 'type': None}
-🔍 Descrição recebida: 'WM Meu Negocio - Licenca Perpetua'
-🆔 Produto identificado: wmmeunegocio
-Webhook recebido: {'resource': 'https://api.mercadolibre.com/merchant_orders/43427157863', 'topic': 'merchant_order'}
-Licenca criada com sucesso: 185306-309426-1462E1-82DDFB-811CD8-V3
-✅ Licença gerada: 185306-309426-1462E1-82DDFB-811CD8-V3 para cliente@email.com
-✅ E-mail enviado para cliente@email.com
- * Restarting with stat
-  File "/var/www/html/app.py", line 235
-    email = pagamentos_pendentes.get(payment_id, 'cliente@email.com')
-    ^
-IndentationError: expected an indented block after 'if' statement on line 234
+ * Tip: There are .env or .flaskenv files present. Do "pip install python-dotenv" to use them.
+ * Serving Flask app 'server' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://178.253.250.117:80/ (Press CTRL+C to quit)
+127.0.0.1 - - [14/Aug/2026 06:21:17] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.69.39.64 - - [14/Aug/2026 06:21:56] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.69.39.2 - - [14/Aug/2026 06:21:57] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.39.64 - - [14/Aug/2026 06:22:01] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+172.69.39.64 - - [14/Aug/2026 06:22:01] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 06:22:13] "GET /wm-grafotecnica.html HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:20] "GET /produtos.html HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:31] "GET /index.html HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:33] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:33] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:37] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:37] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.71.6.30 - - [14/Aug/2026 06:22:44] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
+[2026-08-14 06:22:44,630] ERROR in app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/favicon.ico'
+104.22.10.6 - - [14/Aug/2026 06:22:44] "GET /favicon.ico HTTP/1.1" 500 -
+172.71.6.30 - - [14/Aug/2026 06:22:47] "GET /comprar/grafolaudo_anual HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 06:22:54] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
+[2026-08-14 06:22:56,259] ERROR in app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/favicon.ico'
+104.22.10.6 - - [14/Aug/2026 06:22:56] "GET /favicon.ico HTTP/1.1" 500 -
+172.70.34.144 - - [14/Aug/2026 06:23:42] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
