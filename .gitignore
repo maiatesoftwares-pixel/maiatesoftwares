@@ -1,2 +1,34 @@
-downloads/
-.env
+# Backups
+*.tar.gz
+*.tar
+backup_*
+
+# Downloads/Instaladores
+downloads/*.exe
+downloads/*.rar
+downloads/*.zip
+*.exe
+*.rar
+*.zip
+
+# Banco de dados
+*.db
+*.db-journal
+
+# Logs
+*.log
+flask.log
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Arquivos temporários
+*.save
+*.bak
+*.backup
+*.tmp
+
+# Arquivos grandes
+*.iso
+*.img

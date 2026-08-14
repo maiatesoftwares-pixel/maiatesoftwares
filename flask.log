@@ -1,4 +1,5 @@
- * Tip: There are .env or .flaskenv files present. Do "pip install python-dotenv" to use them.
+sudo: a password is required
+askenv files present. Do "pip install python-dotenv" to use them.
  * Serving Flask app 'server' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
@@ -59,3 +60,4 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/favicon.ico'
 104.22.10.6 - - [14/Aug/2026 06:22:56] "GET /favicon.ico HTTP/1.1" 500 -
 172.70.34.144 - - [14/Aug/2026 06:23:42] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
+3.129.187.38 - - [14/Aug/2026 06:32:54] "GET / HTTP/1.1" 200 -
