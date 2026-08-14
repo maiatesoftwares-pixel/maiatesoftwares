@@ -19,3 +19,6 @@ __pycache__/
 *.tmp
 *.iso
 *.img
+*.tar.gz
+*.pdf
+downloads/
