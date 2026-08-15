@@ -365,24 +365,34 @@ def baixar(produto):
     '''
 
 import sqlite3
-
-# ===== ROTA PARA SALVAR AVALIAÇÃO =====
 @app.route('/avaliar/<produto>', methods=['POST'])
 def avaliar(produto):
     try:
         data = request.json
         nota = data.get('nota')
+        sessao = request.cookies.get('session_id') or request.remote_addr
 
         if not nota or nota < 1 or nota > 5:
             return jsonify({'erro': 'Nota inválida'}), 400
 
         conn = sqlite3.connect('/var/www/html/avaliacoes.db')
         c = conn.cursor()
-        c.execute('INSERT INTO avaliacoes (produto, nota) VALUES (?, ?)', (produto, nota))
+
+        # Verifica se já votou
+        c.execute('SELECT id FROM avaliacoes WHERE produto = ? AND sessao = ?', (produto, sessao))
+        if c.fetchone():
+            conn.close()
+            return jsonify({'erro': 'Você já avaliou este produto.'}), 400
+
+        # Insere nova avaliação
+        c.execute('INSERT INTO avaliacoes (produto, nota, sessao) VALUES (?, ?, ?)', (produto, nota, sessao))
         conn.commit()
         conn.close()
 
-        return jsonify({'status': 'ok', 'mensagem': 'Avaliação salva com sucesso!'}), 200
+        # Cria resposta com cookie
+        resp = jsonify({'status': 'ok', 'mensagem': 'Avaliação salva com sucesso!'})
+        resp.set_cookie('session_id', sessao, max_age=60*60*24*365, httponly=True)
+        return resp, 200
 
     except Exception as e:
         return jsonify({'erro': str(e)}), 500
@@ -409,5 +419,5 @@ def media(produto):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
 

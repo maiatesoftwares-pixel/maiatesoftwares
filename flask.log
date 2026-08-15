@@ -1,28 +1,41 @@
-sudo: a password is required
-askenv files present. Do "pip install python-dotenv" to use them.
+nohup: ignoring input
+ * Tip: There are .env or .flaskenv files present. Do "pip install python-dotenv" to use them.
  * Serving Flask app 'server' (lazy loading)
  * Environment: production
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
- * Debug mode: off
+ * Debug mode: on
  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
  * Running on http://178.253.250.117:80/ (Press CTRL+C to quit)
-127.0.0.1 - - [14/Aug/2026 06:21:17] "GET /grafolaudo.html HTTP/1.1" 200 -
-172.69.39.64 - - [14/Aug/2026 06:21:56] "GET /grafolaudo.html HTTP/1.1" 200 -
-172.69.39.2 - - [14/Aug/2026 06:21:57] "GET /media/grafolaudo HTTP/1.1" 200 -
-172.69.39.64 - - [14/Aug/2026 06:22:01] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
-172.69.39.64 - - [14/Aug/2026 06:22:01] "GET /media/grafolaudo HTTP/1.1" 200 -
-172.69.11.24 - - [14/Aug/2026 06:22:13] "GET /wm-grafotecnica.html HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:20] "GET /produtos.html HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:31] "GET /index.html HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:33] "GET /grafolaudo.html HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:33] "GET /media/grafolaudo HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:37] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:37] "GET /media/grafolaudo HTTP/1.1" 200 -
-172.71.6.30 - - [14/Aug/2026 06:22:44] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
-[2026-08-14 06:22:44,630] ERROR in app: Exception on /favicon.ico [GET]
+ * Restarting with stat
+ * Tip: There are .env or .flaskenv files present. Do "pip install python-dotenv" to use them.
+ * Debugger is active!
+ * Debugger PIN: 137-379-817
+127.0.0.1 - - [14/Aug/2026 23:49:59] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:04] "GET / HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:07] "GET /produtos.html HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:11] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:11] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:15] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:15] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:19] "GET /grafolaudo.html HTTP/1.1" 304 -
+172.69.138.118 - - [14/Aug/2026 23:50:20] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:22] "POST /avaliar/grafolaudo HTTP/1.1" 400 -
+172.69.138.118 - - [14/Aug/2026 23:50:27] "POST /avaliar/grafolaudo HTTP/1.1" 400 -
+172.69.138.118 - - [14/Aug/2026 23:50:33] "GET /produtos.html HTTP/1.1" 304 -
+172.69.138.118 - - [14/Aug/2026 23:50:39] "GET /wmmeunegocio.html HTTP/1.1" 200 -
+172.69.138.118 - - [14/Aug/2026 23:50:53] "GET /wmmeunegocio.html HTTP/1.1" 304 -
+172.69.138.118 - - [14/Aug/2026 23:50:59] "GET /produtos.html HTTP/1.1" 304 -
+172.69.138.118 - - [14/Aug/2026 23:51:02] "GET /maiatemixer.html HTTP/1.1" 304 -
+172.69.138.118 - - [14/Aug/2026 23:51:09] "GET /produtos.html HTTP/1.1" 304 -
+172.69.138.118 - - [14/Aug/2026 23:51:12] "GET /wm-grafotecnica.html HTTP/1.1" 200 -
+104.22.24.167 - - [14/Aug/2026 23:51:51] "GET /.well-known/traffic-advice HTTP/1.1" 500 -
 Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
   File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
   File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
@@ -37,12 +50,66 @@ Traceback (most recent call last):
     return werkzeug.utils.send_file(
   File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
     stat = os.stat(path)
-FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/favicon.ico'
-104.22.10.6 - - [14/Aug/2026 06:22:44] "GET /favicon.ico HTTP/1.1" 500 -
-172.71.6.30 - - [14/Aug/2026 06:22:47] "GET /comprar/grafolaudo_anual HTTP/1.1" 200 -
-104.23.254.96 - - [14/Aug/2026 06:22:54] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
-[2026-08-14 06:22:56,259] ERROR in app: Exception on /favicon.ico [GET]
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/.well-known/traffic-advice'
+172.71.22.194 - - [14/Aug/2026 23:51:51] "GET / HTTP/1.1" 200 -
+172.69.39.122 - - [14/Aug/2026 23:51:52] "GET /logo_maiate2.png HTTP/1.1" 304 -
+104.22.10.26 - - [14/Aug/2026 23:51:52] "GET /favicon.png HTTP/1.1" 304 -
+104.23.254.96 - - [14/Aug/2026 23:51:56] "GET /maiatemixer.html HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:03] "GET /maiatemixer.html HTTP/1.1" 304 -
+104.23.254.96 - - [14/Aug/2026 23:52:04] "GET /maiatemixer.html HTTP/1.1" 200 -
+104.22.10.26 - - [14/Aug/2026 23:52:06] "GET /favicon.png HTTP/1.1" 304 -
+104.23.254.96 - - [14/Aug/2026 23:52:18] "GET /produtos.html HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:21] "GET /grafolaudo.html HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:21] "GET /media/grafolaudo HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:25] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:25] "GET /media/grafolaudo HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:28] "GET /grafolaudo.html HTTP/1.1" 304 -
+104.23.254.96 - - [14/Aug/2026 23:52:29] "GET /media/grafolaudo HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:32] "POST /avaliar/grafolaudo HTTP/1.1" 400 -
+104.23.254.96 - - [14/Aug/2026 23:52:37] "POST /avaliar/grafolaudo HTTP/1.1" 400 -
+104.23.254.96 - - [14/Aug/2026 23:52:43] "GET /produtos.html HTTP/1.1" 304 -
+104.23.254.96 - - [14/Aug/2026 23:52:45] "GET /wm-grafotecnica.html HTTP/1.1" 200 -
+104.23.254.96 - - [14/Aug/2026 23:52:54] "GET /wm-grafotecnica.html HTTP/1.1" 304 -
+172.71.238.176 - - [14/Aug/2026 23:53:12] "GET / HTTP/1.1" 200 -
+172.69.39.122 - - [14/Aug/2026 23:53:12] "GET /logo_maiate2.png HTTP/1.1" 304 -
+172.71.238.162 - - [14/Aug/2026 23:53:14] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.71.238.162 - - [14/Aug/2026 23:53:15] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.71.238.176 - - [14/Aug/2026 23:53:18] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+172.71.238.176 - - [14/Aug/2026 23:53:18] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.71.238.176 - - [14/Aug/2026 23:53:21] "GET /grafolaudo.html HTTP/1.1" 304 -
+172.71.238.176 - - [14/Aug/2026 23:53:21] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.71.238.176 - - [14/Aug/2026 23:53:25] "POST /avaliar/grafolaudo HTTP/1.1" 400 -
+172.71.238.176 - - [14/Aug/2026 23:53:30] "POST /avaliar/grafolaudo HTTP/1.1" 400 -
+172.71.238.176 - - [14/Aug/2026 23:53:37] "GET /produtos.html HTTP/1.1" 200 -
+172.71.238.176 - - [14/Aug/2026 23:53:39] "GET /maiatemixer.html HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:53:53] "GET /maiatemixer.html HTTP/1.1" 304 -
+172.71.238.176 - - [14/Aug/2026 23:54:04] "GET /maiatemixer.html HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:54:15] "GET /maiatemixer.html HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:55:29] "GET / HTTP/1.1" 200 -
+172.69.39.122 - - [14/Aug/2026 23:55:29] "GET /logo_maiate2.png HTTP/1.1" 304 -
+104.22.10.26 - - [14/Aug/2026 23:55:30] "GET /favicon.png HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:55:32] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:55:33] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:55:37] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:55:37] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:55:40] "GET /produtos.html HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:55:44] "GET /maiatemixer.html HTTP/1.1" 200 -
+172.71.238.176 - - [14/Aug/2026 23:55:50] "GET /maiatemixer.html HTTP/1.1" 200 -
+104.22.10.26 - - [14/Aug/2026 23:55:51] "GET /favicon.png HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:55:57] "GET /maiatemixer.html HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:56:07] "GET /index.html HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:56:11] "GET /wm-grafotecnica.html HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:56:18] "GET /index.html HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:56:22] "GET /wm-grafotecnica.html HTTP/1.1" 200 -
+172.69.11.24 - - [14/Aug/2026 23:56:38] "GET /wm-grafotecnica.html HTTP/1.1" 304 -
+172.69.11.24 - - [14/Aug/2026 23:56:49] "GET /wm-grafotecnica.html HTTP/1.1" 304 -
+172.71.238.176 - - [14/Aug/2026 23:56:59] "GET /wm-grafotecnica.html HTTP/1.1" 200 -
+104.22.1.67 - - [15/Aug/2026 00:02:54] "GET /robots.txt HTTP/1.1" 500 -
 Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
   File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
   File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
@@ -57,7 +124,254 @@ Traceback (most recent call last):
     return werkzeug.utils.send_file(
   File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
     stat = os.stat(path)
-FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/favicon.ico'
-104.22.10.6 - - [14/Aug/2026 06:22:56] "GET /favicon.ico HTTP/1.1" 500 -
-172.70.34.144 - - [14/Aug/2026 06:23:42] "GET /baixar/GrafoLaudo HTTP/1.1" 200 -
-3.129.187.38 - - [14/Aug/2026 06:32:54] "GET / HTTP/1.1" 200 -
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/robots.txt'
+108.162.246.135 - - [15/Aug/2026 00:14:49] "GET /baixar/WM_Meu_Negocio HTTP/1.1" 200 -
+172.68.191.172 - - [15/Aug/2026 00:28:20] "GET / HTTP/1.1" 304 -
+172.68.191.166 - - [15/Aug/2026 00:28:20] "GET /logo_maiate2.png HTTP/1.1" 200 -
+172.68.191.172 - - [15/Aug/2026 00:29:10] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.68.191.172 - - [15/Aug/2026 00:29:11] "GET /media/grafolaudo HTTP/1.1" 200 -
+172.68.191.172 - - [15/Aug/2026 00:29:21] "POST /avaliar/grafolaudo HTTP/1.1" 200 -
+172.68.191.172 - - [15/Aug/2026 00:29:21] "GET /media/grafolaudo HTTP/1.1" 200 -
+5.61.209.44 - - [15/Aug/2026 00:32:33] "GET /SDK/webLanguage HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/SDK/webLanguage'
+212.64.199.194 - - [15/Aug/2026 00:34:35] "GET /.env HTTP/1.1" 200 -
+192.177.177.153 - - [15/Aug/2026 00:41:42] "GET /login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/login'
+172.71.126.167 - - [15/Aug/2026 00:45:19] "GET / HTTP/1.1" 200 -
+185.242.226.114 - - [15/Aug/2026 00:58:16] code 400, message Bad request version ('À\x14À')
+185.242.226.114 - - [15/Aug/2026 00:58:16] "   ZÚu8îË<¬LÂ!øÇÀ1«tR|lÇÖº'  À/À+ÀÀÀÀ	ÀÀ" HTTPStatus.BAD_REQUEST -
+172.71.28.131 - - [15/Aug/2026 00:59:17] "GET /robots.txt HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/robots.txt'
+162.159.115.9 - - [15/Aug/2026 00:59:18] "GET /sitemap.xml HTTP/1.1" 200 -
+162.159.106.175 - - [15/Aug/2026 01:00:23] "GET /robots.txt HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/robots.txt'
+172.69.138.118 - - [15/Aug/2026 01:01:50] "GET /grafolaudo.html HTTP/1.1" 200 -
+172.68.18.240 - - [15/Aug/2026 01:03:32] "GET / HTTP/1.1" 200 -
+35.215.250.249 - - [15/Aug/2026 01:14:37] "GET / HTTP/1.1" 200 -
+172.71.100.200 - - [15/Aug/2026 01:45:27] "GET /.env HTTP/1.1" 200 -
+162.159.110.54 - - [15/Aug/2026 01:45:27] "GET /.env HTTP/1.1" 200 -
+193.124.20.228 - - [15/Aug/2026 01:58:02] "GET / HTTP/1.1" 200 -
+188.240.59.7 - - [15/Aug/2026 01:58:07] "GET / HTTP/1.1" 200 -
+188.240.59.17 - - [15/Aug/2026 01:58:07] "GET /favicon.png HTTP/1.1" 200 -
+31.14.254.60 - - [15/Aug/2026 01:58:08] "GET /favicon.ico HTTP/1.1" 200 -
+81.19.219.219 - - [15/Aug/2026 01:58:08] "GET / HTTP/1.1" 200 -
+185.216.145.163 - - [15/Aug/2026 01:58:08] "GET /mcp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/mcp'
+5.226.140.3 - - [15/Aug/2026 01:58:08] "GET /mcp/ HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/mcp/'
+217.146.80.102 - - [15/Aug/2026 01:58:08] "GET /api/mcp HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/api/mcp'
+193.176.29.12 - - [15/Aug/2026 01:58:08] "GET /sse HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/sse'
+104.22.10.72 - - [15/Aug/2026 02:10:20] "GET /media/grafolaudo HTTP/1.1" 200 -
+104.22.10.26 - - [15/Aug/2026 02:10:20] "GET /favicon.png HTTP/1.1" 304 -
+104.23.166.182 - - [15/Aug/2026 02:15:46] "GET / HTTP/1.1" 200 -
+141.101.76.10 - - [15/Aug/2026 02:16:12] "GET / HTTP/1.1" 200 -
+104.23.166.175 - - [15/Aug/2026 02:16:14] "GET /logo_maiate2.png HTTP/1.1" 200 -
+5.61.209.44 - - [15/Aug/2026 02:21:09] "GET /SDK/webLanguage HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/SDK/webLanguage'
+172.71.11.85 - - [15/Aug/2026 02:24:15] "GET /downloads/Relatorio_Validacao_GrafoLaudo_v2.4.pdf HTTP/1.1" 304 -
+172.71.28.132 - - [15/Aug/2026 02:41:25] "GET /robots.txt HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/html/server.py", line 16, in serve_static
+    return send_file(filename)
+  File "/usr/lib/python3/dist-packages/flask/helpers.py", line 612, in send_file
+    return werkzeug.utils.send_file(
+  File "/usr/lib/python3/dist-packages/werkzeug/utils.py", line 701, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/robots.txt'
+104.23.197.191 - - [15/Aug/2026 02:41:25] "GET /sitemap.xml HTTP/1.1" 200 -
+45.205.1.240 - - [15/Aug/2026 02:54:13] "GET / HTTP/1.1" 200 -
+45.205.1.240 - - [15/Aug/2026 02:54:15] "GET /favicon.ico HTTP/1.1" 200 -
+45.205.1.240 - - [15/Aug/2026 02:54:16] "GET /favicon.png HTTP/1.1" 200 -
+45.194.67.26 - - [15/Aug/2026 02:55:32] "GET / HTTP/1.1" 200 -
+45.194.67.26 - - [15/Aug/2026 02:55:40] "GET /favicon.ico HTTP/1.1" 200 -
+45.194.67.26 - - [15/Aug/2026 02:55:40] "GET /favicon.png HTTP/1.1" 200 -
+118.193.57.121 - - [15/Aug/2026 02:55:46] "GET / HTTP/1.1" 200 -
+118.193.57.121 - - [15/Aug/2026 02:55:47] code 400, message Bad request version ('À\x13À')
+118.193.57.121 - - [15/Aug/2026 02:55:47] " ò  îî°óÆê;»"Ç¡G)}©%h[7àþñu ãO»9É¬LY»íä8.Ñ <Öã£ÍûÃw÷] &À+À/À,À0Ì©Ì¨À	ÀÀ" HTTPStatus.BAD_REQUEST -
+118.193.57.121 - - [15/Aug/2026 02:55:48] code 400, message Bad HTTP/0.9 request type ('t3')
+118.193.57.121 - - [15/Aug/2026 02:55:48] "t3 12.1.2" HTTPStatus.BAD_REQUEST -
